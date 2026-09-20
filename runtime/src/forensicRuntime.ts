@@ -1,5 +1,6 @@
 import { collectProcesses } from "./collectors/processCollector";
 import { collectUsers } from "./collectors/userCollector";
+import { collectDevice } from "./collectors/deviceCollector";
 import { collectNetworkConnections } from "./collectors/networkCollector";
 import { collectPcap, PcapEvidence } from "./collectors/pcapCollector";
 import { NetworkMonitor } from "./collectors/networkMonitor";
@@ -165,15 +166,17 @@ class ForensicRuntime {
           users
         });
       }
-      case "DEVICE":
-        this.evidence.DEVICE = [];
+      case "DEVICE": {
+        const device = await collectDevice();
+
+        this.evidence.DEVICE = [device];
 
         return this.record("COLLECT", object, {
-          status: "READY",
-          message:
-            "Device-information collection adapter registered."
+          status: "COLLECTED",
+          count: 1,
+          devices: [device]
         });
-
+      }
       default:
         throw new Error(
           `Unsupported forensic collection object: ${object}`
