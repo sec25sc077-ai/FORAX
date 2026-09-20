@@ -1,4 +1,5 @@
 import { collectProcesses } from "./collectors/processCollector";
+import { collectUsers } from "./collectors/userCollector";
 import { collectNetworkConnections } from "./collectors/networkCollector";
 import { collectPcap, PcapEvidence } from "./collectors/pcapCollector";
 import { NetworkMonitor } from "./collectors/networkMonitor";
@@ -153,15 +154,17 @@ class ForensicRuntime {
             "File-system collection adapter registered."
         });
 
-      case "USER":
-        this.evidence.USER = [];
+      case "USER": {
+        const users = await collectUsers();
+
+        this.evidence.USER = users;
 
         return this.record("COLLECT", object, {
-          status: "READY",
-          message:
-            "User-account collection adapter registered."
+          status: "COLLECTED",
+          count: users.length,
+          users
         });
-
+      }
       case "DEVICE":
         this.evidence.DEVICE = [];
 
