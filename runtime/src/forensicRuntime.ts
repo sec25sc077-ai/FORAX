@@ -5,6 +5,7 @@ import { NetworkMonitor } from "./collectors/networkMonitor";
 import { ProcessMonitor } from "./collectors/processMonitor";
 import { hashFile as calculateFileHash } from "./evidence/hashFile";
 import { getFileMetadata } from "./evidence/getFile";
+import { searchFile } from "./evidence/searchFile";
 
 export interface ForensicResult {
   operation: string;
@@ -550,6 +551,42 @@ private compare(
     );
   }
 
+  async verifyFile(
+    filePath: string,
+    expectedHash: string
+  ): Promise<ForensicResult> {
+    const evidence = await calculateFileHash(filePath);
+
+    const normalizedExpectedHash =
+      expectedHash.trim().toLowerCase();
+
+    const actualHash =
+      evidence.sha256.toLowerCase();
+
+    const verified =
+      actualHash === normalizedExpectedHash;
+
+    return this.record("VERIFY_FILE", "FILE", {
+      status: verified ? "VERIFIED" : "MISMATCH",
+      filePath,
+      expectedHash: normalizedExpectedHash,
+      actualHash,
+      verified
+    });
+  }
+    async searchFile(
+      directory: string,
+      pattern: string
+    ): Promise<ForensicResult> {
+      const evidence = await searchFile(directory, pattern);
+
+      this.evidence.FILE = [
+        ...(this.evidence.FILE ?? []),
+        ...evidence.files
+      ];
+
+      return this.record("SEARCH_FILE", "FILE", evidence);
+    }
   async getFile(filePath: string): Promise<ForensicResult> {
     const evidence = await getFileMetadata(filePath);
 

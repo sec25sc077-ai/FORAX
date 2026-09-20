@@ -1,4 +1,4 @@
-﻿import { ForaxError } from "./errors";
+import { ForaxError } from "./errors";
 import { Token, Program, Statement, WhereClause, Condition } from "./types";
 
 const OBJECTS = new Set([
@@ -82,6 +82,12 @@ export class Parser {
       case "MONITOR":
         return this.monitorStatement();
         return this.watchStatement();
+
+      case "SEARCH":
+        return this.searchFileStatement();
+
+      case "VERIFY":
+        return this.verifyFileStatement();
 
       case "HASH":
         return this.hashFileStatement();
@@ -334,6 +340,39 @@ export class Parser {
     this.consume("FILE");
     const path = this.consumeAny("STRING","IDENTIFIER").value;
     return { type: "HashFileStatement", path };
+  }
+  private searchFileStatement(): Statement {
+    this.consume("SEARCH");
+    this.consume("FILE");
+
+    const directory =
+      this.consumeAny("STRING", "IDENTIFIER").value;
+
+    const pattern =
+      this.consumeAny("STRING", "IDENTIFIER").value;
+
+    return {
+      type: "SearchFileStatement",
+      directory,
+      pattern
+    };
+  }
+
+  private verifyFileStatement(): Statement {
+    this.consume("VERIFY");
+    this.consume("FILE");
+
+    const path =
+      this.consumeAny("STRING", "IDENTIFIER").value;
+
+    const expectedHash =
+      this.consumeAny("STRING", "IDENTIFIER").value;
+
+    return {
+      type: "VerifyFileStatement",
+      path,
+      expectedHash
+    };
   }
 
   private whereClause(): WhereClause {

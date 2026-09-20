@@ -1,4 +1,4 @@
-﻿export type TokenType =
+export type TokenType =
   | "KEYWORD"
   | "IDENTIFIER"
   | "STRING"
@@ -37,7 +37,10 @@ export type Statement =
   | MonitorNetworkStatement
   | HashFileStatement
   | GetFileStatement
-  | GetProcessStatement;
+  | SearchFileStatement
+  | GetProcessStatement
+  | VerifyFileStatement;
+
 
 export interface CaseStatement {
   type: "CaseStatement";
@@ -112,6 +115,17 @@ export interface MonitorNetworkStatement {
 export interface HashFileStatement {
   type: "HashFileStatement";
   path: string;
+}
+
+  export interface VerifyFileStatement {
+    type: "VerifyFileStatement";
+    path: string;
+    expectedHash: string;
+  }
+export interface SearchFileStatement {
+  type: "SearchFileStatement";
+  directory: string;
+  pattern: string;
 }
 
 export interface GetFileStatement {

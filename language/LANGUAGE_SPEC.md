@@ -1,4 +1,4 @@
-﻿# FORAX Language Specification v0.1
+# FORAX Language Specification v0.1
 
 ## 1. Purpose
 
@@ -82,7 +82,28 @@ The correlation operation is:
 
 Regional-language aliases for `CORRELATE` and `WITH` map to the same canonical tokens and therefore produce the same AST and semantics.
 
-## 7. Errors
+## 7. File evidence operations
+
+FORAX supports deterministic, read-only file evidence operations.
+
+Supported operations:
+- `GET FILE` Ã¢â‚¬â€ collect metadata and SHA-256 evidence for a specified file.
+- `HASH FILE` Ã¢â‚¬â€ calculate the SHA-256 hash of a specified file.
+- `VERIFY FILE` Ã¢â‚¬â€ compare a file against an expected SHA-256 hash without modifying the file.
+- `SEARCH FILE` Ã¢â‚¬â€ search a specified directory for matching file names and collect metadata for each match.
+
+Examples:
+
+```text
+GET FILE "C:\\evidence\\sample.txt"
+HASH FILE "C:\\evidence\\sample.txt"
+VERIFY FILE "C:\\evidence\\sample.txt" "EXPECTED_SHA256_HASH"
+SEARCH FILE "C:\\evidence" "sample"
+```
+
+These operations do not modify the target files.
+
+## 8. Errors
 
 The compiler must report:
 - unknown keyword
@@ -94,7 +115,7 @@ The compiler must report:
 - unavailable platform capability
 - unsafe/disallowed operation
 
-## 8. Versioning
+## 9. Versioning
 
 FORAX v0.1 is intentionally small enough to implement and test. New keywords must be added to the canonical dictionary before they are accepted by the compiler.
 

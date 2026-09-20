@@ -1,4 +1,4 @@
-﻿import { Program, Statement, WhereClause, Condition } from "./types";
+import { Program, Statement, WhereClause, Condition } from "./types";
 
 export function generateTypeScript(program: Program): string {
   const lines: string[] = [
@@ -94,10 +94,20 @@ function generateStatement(statement: Statement): string[] {
         `await forensicRuntime.hashFile(${JSON.stringify(statement.path)});`
       ];
 
+    case "VerifyFileStatement":
+      return [
+        `await forensicRuntime.verifyFile(${JSON.stringify(statement.path)}, ${JSON.stringify(statement.expectedHash)});`
+      ];
+
     case "GetProcessStatement":
       return [
         `await forensicRuntime.getProcess(${statement.pid});`
       ];
+      case "SearchFileStatement":
+        return [
+          `await forensicRuntime.searchFile(${JSON.stringify(statement.directory)}, ${JSON.stringify(statement.pattern)});`
+        ];
+
     case "GetFileStatement":
       return [
         `await forensicRuntime.getFile(${JSON.stringify(statement.path)});`

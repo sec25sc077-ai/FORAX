@@ -1,4 +1,4 @@
-﻿import { Program, Statement, Condition } from "./types";
+import { Program, Statement, Condition } from "./types";
 import { forensicRuntime } from "../../runtime/src/forensicRuntime";
 
 type RuntimeOperator =
@@ -122,6 +122,13 @@ async function executeStatement(
     case "HashFileStatement":
       await forensicRuntime.hashFile(
         statement.path
+      );
+      break;
+
+    case "SearchFileStatement":
+      await forensicRuntime.searchFile(
+        statement.directory,
+        statement.pattern
       );
       break;
 

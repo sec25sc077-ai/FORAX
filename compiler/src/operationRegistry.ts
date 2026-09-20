@@ -1,4 +1,4 @@
-﻿export type ForaxOperationCategory =
+export type ForaxOperationCategory =
   | "CASE"
   | "COLLECTION"
   | "NETWORK"
@@ -416,6 +416,26 @@ export const FORAX_OPERATIONS: ForaxOperationDefinition[] = [
     objects: ["FILE"]
   },
 
+      {
+      name: "VERIFY_FILE",
+      category: "EVIDENCE",
+      description: "Verify a file against an expected SHA-256 hash without modifying it.",
+      runtimeMethod: "verifyFile",
+      safety: "READ_ONLY",
+      input: "FILE + HASH",
+      output: "REPORT",
+      objects: ["FILE"]
+    },
+{
+    name: "SEARCH_FILE",
+    category: "EVIDENCE",
+    description: "Search file evidence using a deterministic path pattern without modifying files.",
+    runtimeMethod: "searchFile",
+    safety: "READ_ONLY",
+    input: "FILE",
+    output: "FILE[]",
+    objects: ["FILE"]
+  },
   {
     name: "GET_FILE",
     category: "EVIDENCE",

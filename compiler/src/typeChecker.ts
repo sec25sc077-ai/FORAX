@@ -1,4 +1,4 @@
-﻿import { ForaxError } from "./errors";
+import { ForaxError } from "./errors";
 import {
   Program,
   Statement,
@@ -264,6 +264,12 @@ function checkStatement(
     case "HashFileStatement":
       assertOperation(
         "HASH_FILE"
+      );
+      return;
+
+    case "SearchFileStatement":
+      assertOperation(
+        "SEARCH_FILE"
       );
       return;
 

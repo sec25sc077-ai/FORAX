@@ -1,4 +1,4 @@
-﻿import assert from "node:assert/strict";
+import assert from "node:assert/strict";
 import { lex } from "../compiler/src/lexer";
 import { Parser } from "../compiler/src/parser";
 import { loadAliases } from "../compiler/src/dictionary";
@@ -123,6 +123,38 @@ assert.equal(
 );
 
 console.log("COUNT multilingual equivalence test passed.");
+
+const searchFileSources = {
+  english: `SEARCH FILE "." "forax-search"`,
+
+  tamil: `\u0BA4\u0BC7\u0B9F\u0BC1 \u0B95\u0BCB\u0BAA\u0BCD\u0BAA\u0BC1 "." "forax-search"`,
+
+  hindi: `\u0924\u0932\u093E\u0936 \u092B\u093C\u093E\u0907\u0932 "." "forax-search"`,
+
+  marathi: `\u0936\u094B\u0927\u0923\u0940 \u092B\u093E\u0907\u0932 "." "forax-search"`
+};
+
+const searchFileGenerated = Object.entries(searchFileSources).map(
+  ([language, source]) => {
+    const ast = new Parser(
+      lex(source, loadAliases(language))
+    ).parse();
+
+    checkProgram(ast);
+
+    return {
+      language,
+      code: generateTypeScript(ast)
+    };
+  }
+);
+
+assert.equal(
+  new Set(searchFileGenerated.map((item) => item.code)).size,
+  1
+);
+
+console.log("SEARCH FILE multilingual equivalence test passed.");
 console.log("FORAX multilingual equivalence test passed.");
 
 

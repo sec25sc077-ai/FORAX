@@ -1,15 +1,15 @@
-{
-  "name": "forax",
-  "version": "0.3.0",
-  "private": true,
-  "description": "FORAX multilingual deterministic forensic programming language",
-  "scripts": {
-    "build": "tsc",
-    "start": "node dist/compiler/src/cli.js",
-    "test": "node dist/tests/compiler.test.js && node dist/tests/typeChecker.test.js && node dist/tests/operationRegistry.test.js && node dist/tests/multilingual.test.js && node dist/tests/hashFile.test.js && node dist/tests/getFile.test.js && node dist/tests/summarizeProcess.test.js"
-  },
-  "devDependencies": {
-    "@types/node": "^22.0.0",
-    "typescript": "^5.6.0"
-  }
+﻿{
+    "name":  "forax",
+    "version":  "0.3.0",
+    "private":  true,
+    "description":  "FORAX multilingual deterministic forensic programming language",
+    "scripts":  {
+                    "build":  "tsc",
+                    "start":  "node dist/compiler/src/cli.js",
+                    "test":  "node dist/tests/compiler.test.js \u0026\u0026 node dist/tests/searchFile.test.js \u0026\u0026 node dist/tests/typeChecker.test.js \u0026\u0026 node dist/tests/operationRegistry.test.js \u0026\u0026 node dist/tests/multilingual.test.js \u0026\u0026 node dist/tests/hashFile.test.js \u0026\u0026 node dist/tests/getFile.test.js \u0026\u0026 node dist/tests/summarizeProcess.test.js \u0026\u0026 node dist/tests/verifyFile.test.js"
+                },
+    "devDependencies":  {
+                            "@types/node":  "^22.0.0",
+                            "typescript":  "^5.6.0"
+                        }
 }
