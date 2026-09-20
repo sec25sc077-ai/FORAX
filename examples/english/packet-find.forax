@@ -1,0 +1,4 @@
+﻿CASE "PCAP-002"
+LOAD PCAP "capture.pcap"
+FIND PACKET
+REPORT

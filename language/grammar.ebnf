@@ -1,0 +1,46 @@
+﻿(* FORAX Grammar v0.1 - simplified EBNF *)
+PROGRAM          = { STATEMENT } ;
+STATEMENT        = CASE_STATEMENT
+                 | COLLECT_STATEMENT
+                 | FIND_STATEMENT
+                 | CORRELATE_STATEMENT
+                 | CREATE_TIMELINE_STATEMENT
+                 | REPORT_STATEMENT
+                 | REALTIME_STATEMENT ;
+
+CASE_STATEMENT   = "CASE", STRING ;
+COLLECT_STATEMENT= "COLLECT", OBJECT ;
+FIND_STATEMENT   = "FIND", OBJECT, [ WHERE_CLAUSE ] ;
+COUNT_STATEMENT  = "COUNT", OBJECT, [ WHERE_CLAUSE ] ;
+CORRELATE_STATEMENT = "CORRELATE", OBJECT, "WITH", OBJECT ;
+WHERE_CLAUSE     = "WHERE", CONDITION, { LOGICAL_OPERATOR, CONDITION } ;
+CONDITION        = FIELD, OPERATOR, VALUE ;
+LOGICAL_OPERATOR = "AND" | "OR" ;
+OPERATOR         = "==" | "!=" | ">" | "<" | ">=" | "<=" ;
+REALTIME_STATEMENT =
+                   "START", "NETWORK_MONITOR"
+                 | "STOP", "NETWORK_MONITOR"
+                 | "WATCH", OBJECT
+                 | "FILTER", OBJECT, WHERE_CLAUSE ;
+CREATE_TIMELINE_STATEMENT = "CREATE", "TIMELINE" ;
+REPORT_STATEMENT = "REPORT" ;
+
+OBJECT           = "PROCESS"
+                 | "FILE"
+                 | "USER"
+                 | "DEVICE"
+                 | "NETWORK_CONNECTION"
+                 | "PACKET"
+                 | "FLOW"
+                 | "PCAP"
+                 | "TIMELINE" ;
+
+FIELD            = IDENTIFIER ;
+VALUE            = STRING | NUMBER | IDENTIFIER ;
+STRING           = '"' , { CHARACTER } , '"' ;
+NUMBER           = DIGIT , { DIGIT } ;
+IDENTIFIER       = LETTER , { LETTER | DIGIT | "_" } ;
+
+
+
+

@@ -1,0 +1,2019 @@
+﻿{
+  "CASE": {
+    "category": "CASE_MANAGEMENT",
+    "type": "KEYWORD",
+    "description": "Case and investigation scope metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "CASE_ID": {
+    "category": "CASE_MANAGEMENT",
+    "type": "KEYWORD",
+    "description": "Case and investigation scope metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "CASE_NAME": {
+    "category": "CASE_MANAGEMENT",
+    "type": "KEYWORD",
+    "description": "Case and investigation scope metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "INVESTIGATION": {
+    "category": "CASE_MANAGEMENT",
+    "type": "KEYWORD",
+    "description": "Case and investigation scope metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "INCIDENT": {
+    "category": "CASE_MANAGEMENT",
+    "type": "KEYWORD",
+    "description": "Case and investigation scope metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "SOURCE": {
+    "category": "CASE_MANAGEMENT",
+    "type": "KEYWORD",
+    "description": "Case and investigation scope metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "TARGET": {
+    "category": "CASE_MANAGEMENT",
+    "type": "KEYWORD",
+    "description": "Case and investigation scope metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "SCOPE": {
+    "category": "CASE_MANAGEMENT",
+    "type": "KEYWORD",
+    "description": "Case and investigation scope metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "EVIDENCE": {
+    "category": "EVIDENCE",
+    "type": "KEYWORD",
+    "description": "Evidence handling and provenance metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "EVIDENCE_ID": {
+    "category": "EVIDENCE",
+    "type": "KEYWORD",
+    "description": "Evidence handling and provenance metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "EXHIBIT": {
+    "category": "EVIDENCE",
+    "type": "KEYWORD",
+    "description": "Evidence handling and provenance metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "EVIDENCE_SOURCE": {
+    "category": "EVIDENCE",
+    "type": "KEYWORD",
+    "description": "Evidence handling and provenance metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "EVIDENCE_TYPE": {
+    "category": "EVIDENCE",
+    "type": "KEYWORD",
+    "description": "Evidence handling and provenance metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "EVIDENCE_NOTE": {
+    "category": "EVIDENCE",
+    "type": "KEYWORD",
+    "description": "Evidence handling and provenance metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "CHAIN_OF_CUSTODY": {
+    "category": "EVIDENCE",
+    "type": "KEYWORD",
+    "description": "Evidence handling and provenance metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "CUSTODIAN": {
+    "category": "EVIDENCE",
+    "type": "KEYWORD",
+    "description": "Evidence handling and provenance metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "ACQUIRED_AT": {
+    "category": "EVIDENCE",
+    "type": "KEYWORD",
+    "description": "Evidence handling and provenance metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "ACQUIRED_BY": {
+    "category": "EVIDENCE",
+    "type": "KEYWORD",
+    "description": "Evidence handling and provenance metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "ACQUISITION_METHOD": {
+    "category": "EVIDENCE",
+    "type": "KEYWORD",
+    "description": "Evidence handling and provenance metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "READ_ONLY": {
+    "category": "EVIDENCE",
+    "type": "KEYWORD",
+    "description": "Evidence handling and provenance metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "PRESERVE": {
+    "category": "EVIDENCE",
+    "type": "KEYWORD",
+    "description": "Evidence handling and provenance metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "SEAL": {
+    "category": "EVIDENCE",
+    "type": "KEYWORD",
+    "description": "Evidence handling and provenance metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "RELEASE": {
+    "category": "EVIDENCE",
+    "type": "KEYWORD",
+    "description": "Evidence handling and provenance metadata",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "COLLECT": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "ACQUIRE": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "FIND": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "SEARCH": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "FILTER": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "WHERE": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "AND": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "OR": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "NOT": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "COMPARE": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "COUNT": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "SORT": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "GROUP": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "User and account artifacts",
+    "runtimeOperation": "readUsers",
+    "realtime": false
+  },
+  "DISTINCT": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "LIMIT": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "SELECT": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "SHOW": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "HIDE": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "ANALYZE": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },  "WITH": {
+    "category": "SYNTAX",
+    "type": "COMMAND",
+    "realtime": false
+  },
+
+  "CORRELATE": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "PIVOT": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "MATCH": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "EXISTS": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "CONTAINS": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "STARTS_WITH": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "ENDS_WITH": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "BETWEEN": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "IN": {
+    "category": "INVESTIGATION",
+    "type": "COMMAND",
+    "description": "Investigation and query operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "PROCESS": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Process and execution artifacts",
+    "runtimeOperation": "readProcesses",
+    "realtime": false
+  },
+  "PROCESSES": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Process and execution artifacts",
+    "runtimeOperation": "readProcesses",
+    "realtime": false
+  },
+  "PROCESS_LIST": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Process and execution artifacts",
+    "runtimeOperation": "readProcesses",
+    "realtime": false
+  },
+  "PROCESS_TREE": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Process and execution artifacts",
+    "runtimeOperation": "readProcesses",
+    "realtime": false
+  },
+  "PROCESS_ID": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Process and execution artifacts",
+    "runtimeOperation": "readProcesses",
+    "realtime": false
+  },
+  "PARENT_PROCESS_ID": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Process and execution artifacts",
+    "runtimeOperation": "readProcesses",
+    "realtime": false
+  },
+  "PROCESS_NAME": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Process and execution artifacts",
+    "runtimeOperation": "readProcesses",
+    "realtime": false
+  },
+  "PROCESS_PATH": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Process and execution artifacts",
+    "runtimeOperation": "readProcesses",
+    "realtime": false
+  },
+  "PROCESS_COMMAND": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Process and execution artifacts",
+    "runtimeOperation": "readProcesses",
+    "realtime": false
+  },
+  "PROCESS_USER": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Process and execution artifacts",
+    "runtimeOperation": "readProcesses",
+    "realtime": false
+  },
+  "PROCESS_START_TIME": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Process and execution artifacts",
+    "runtimeOperation": "readProcesses",
+    "realtime": false
+  },
+  "PROCESS_END_TIME": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Process and execution artifacts",
+    "runtimeOperation": "readProcesses",
+    "realtime": false
+  },
+  "PROCESS_STATUS": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Process and execution artifacts",
+    "runtimeOperation": "readProcesses",
+    "realtime": false
+  },
+  "PROCESS_CPU": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Process and execution artifacts",
+    "runtimeOperation": "readProcesses",
+    "realtime": false
+  },
+  "PROCESS_MEMORY": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Process and execution artifacts",
+    "runtimeOperation": "readProcesses",
+    "realtime": false
+  },
+  "PROCESS_NETWORK": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Process and execution artifacts",
+    "runtimeOperation": "readProcesses",
+    "realtime": false
+  },
+  "THREAD": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Process and execution artifacts",
+    "runtimeOperation": "readProcesses",
+    "realtime": false
+  },
+  "THREAD_LIST": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Process and execution artifacts",
+    "runtimeOperation": "readProcesses",
+    "realtime": false
+  },
+  "FILE": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "FILES": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "DIRECTORY": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "DIRECTORIES": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "FILE_METADATA": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "FILE_NAME": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "FILE_PATH": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "FILE_SIZE": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "FILE_EXTENSION": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "FILE_OWNER": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "FILE_PERMISSIONS": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "FILE_CREATED": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "FILE_MODIFIED": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "FILE_ACCESSED": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "FILE_DELETED": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "FILE_TYPE": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "FILE_HASH": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "FILE_CONTENT": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "FILE_SIGNATURE": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "FILE_SYSTEM": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "MOUNT": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "VOLUME": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "File-system artifacts",
+    "runtimeOperation": "readFiles",
+    "realtime": false
+  },
+  "USER": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "User and account artifacts",
+    "runtimeOperation": "readUsers",
+    "realtime": false
+  },
+  "USERS": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "User and account artifacts",
+    "runtimeOperation": "readUsers",
+    "realtime": false
+  },
+  "USER_LIST": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "User and account artifacts",
+    "runtimeOperation": "readUsers",
+    "realtime": false
+  },
+  "USER_ID": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "User and account artifacts",
+    "runtimeOperation": "readUsers",
+    "realtime": false
+  },
+  "USERNAME": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "User and account artifacts",
+    "runtimeOperation": "readUsers",
+    "realtime": false
+  },
+  "GROUP_LIST": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "User and account artifacts",
+    "runtimeOperation": "readUsers",
+    "realtime": false
+  },
+  "LOGIN": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "User and account artifacts",
+    "runtimeOperation": "readUsers",
+    "realtime": false
+  },
+  "LOGOUT": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "User and account artifacts",
+    "runtimeOperation": "readUsers",
+    "realtime": false
+  },
+  "LOGIN_TIME": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "User and account artifacts",
+    "runtimeOperation": "readUsers",
+    "realtime": false
+  },
+  "ACCOUNT_CREATED": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "User and account artifacts",
+    "runtimeOperation": "readUsers",
+    "realtime": false
+  },
+  "ACCOUNT_STATUS": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "User and account artifacts",
+    "runtimeOperation": "readUsers",
+    "realtime": false
+  },
+  "PRIVILEGE": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "User and account artifacts",
+    "runtimeOperation": "readUsers",
+    "realtime": false
+  },
+  "DEVICE": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host and device artifacts",
+    "runtimeOperation": "readDevices",
+    "realtime": false
+  },
+  "DEVICES": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host and device artifacts",
+    "runtimeOperation": "readDevices",
+    "realtime": false
+  },
+  "HOST": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host and device artifacts",
+    "runtimeOperation": "readDevices",
+    "realtime": false
+  },
+  "HOSTNAME": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host and device artifacts",
+    "runtimeOperation": "readDevices",
+    "realtime": false
+  },
+  "OS": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host and device artifacts",
+    "runtimeOperation": "readDevices",
+    "realtime": false
+  },
+  "OS_VERSION": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host and device artifacts",
+    "runtimeOperation": "readDevices",
+    "realtime": false
+  },
+  "MACHINE_ID": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host and device artifacts",
+    "runtimeOperation": "readDevices",
+    "realtime": false
+  },
+  "HARDWARE": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host and device artifacts",
+    "runtimeOperation": "readDevices",
+    "realtime": false
+  },
+  "USB": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host and device artifacts",
+    "runtimeOperation": "readDevices",
+    "realtime": false
+  },
+  "USB_DEVICE": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host and device artifacts",
+    "runtimeOperation": "readDevices",
+    "realtime": false
+  },
+  "USB_HISTORY": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host and device artifacts",
+    "runtimeOperation": "readDevices",
+    "realtime": false
+  },
+  "DRIVE": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host and device artifacts",
+    "runtimeOperation": "readDevices",
+    "realtime": false
+  },
+  "PARTITION": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host and device artifacts",
+    "runtimeOperation": "readDevices",
+    "realtime": false
+  },
+  "SERIAL_NUMBER": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host and device artifacts",
+    "runtimeOperation": "readDevices",
+    "realtime": false
+  },
+  "EVENT": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "System and audit event artifacts",
+    "runtimeOperation": "readEvents",
+    "realtime": false
+  },
+  "EVENTS": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "System and audit event artifacts",
+    "runtimeOperation": "readEvents",
+    "realtime": false
+  },
+  "EVENT_LOG": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "System and audit event artifacts",
+    "runtimeOperation": "readEvents",
+    "realtime": false
+  },
+  "EVENT_SOURCE": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "System and audit event artifacts",
+    "runtimeOperation": "readEvents",
+    "realtime": false
+  },
+  "EVENT_ID": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "System and audit event artifacts",
+    "runtimeOperation": "readEvents",
+    "realtime": false
+  },
+  "EVENT_TIME": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "System and audit event artifacts",
+    "runtimeOperation": "readEvents",
+    "realtime": false
+  },
+  "EVENT_TYPE": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "System and audit event artifacts",
+    "runtimeOperation": "readEvents",
+    "realtime": false
+  },
+  "EVENT_MESSAGE": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "System and audit event artifacts",
+    "runtimeOperation": "readEvents",
+    "realtime": false
+  },
+  "EVENT_LEVEL": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "System and audit event artifacts",
+    "runtimeOperation": "readEvents",
+    "realtime": false
+  },
+  "AUDIT_LOG": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "System and audit event artifacts",
+    "runtimeOperation": "readEvents",
+    "realtime": false
+  },
+  "SYSTEM_LOG": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "System and audit event artifacts",
+    "runtimeOperation": "readEvents",
+    "realtime": false
+  },
+  "APPLICATION_LOG": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "System and audit event artifacts",
+    "runtimeOperation": "readEvents",
+    "realtime": false
+  },
+  "SECURITY_LOG": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "System and audit event artifacts",
+    "runtimeOperation": "readEvents",
+    "realtime": false
+  },
+  "SERVICE": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Persistence and system configuration artifacts",
+    "runtimeOperation": "readSystemArtifacts",
+    "realtime": false
+  },
+  "SERVICES": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Persistence and system configuration artifacts",
+    "runtimeOperation": "readSystemArtifacts",
+    "realtime": false
+  },
+  "SERVICE_NAME": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Persistence and system configuration artifacts",
+    "runtimeOperation": "readSystemArtifacts",
+    "realtime": false
+  },
+  "SERVICE_STATUS": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Persistence and system configuration artifacts",
+    "runtimeOperation": "readSystemArtifacts",
+    "realtime": false
+  },
+  "SERVICE_START_TYPE": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Persistence and system configuration artifacts",
+    "runtimeOperation": "readSystemArtifacts",
+    "realtime": false
+  },
+  "DRIVER": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Persistence and system configuration artifacts",
+    "runtimeOperation": "readSystemArtifacts",
+    "realtime": false
+  },
+  "DRIVERS": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Persistence and system configuration artifacts",
+    "runtimeOperation": "readSystemArtifacts",
+    "realtime": false
+  },
+  "SCHEDULED_TASK": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Persistence and system configuration artifacts",
+    "runtimeOperation": "readSystemArtifacts",
+    "realtime": false
+  },
+  "TASKS": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Persistence and system configuration artifacts",
+    "runtimeOperation": "readSystemArtifacts",
+    "realtime": false
+  },
+  "STARTUP_ITEM": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Persistence and system configuration artifacts",
+    "runtimeOperation": "readSystemArtifacts",
+    "realtime": false
+  },
+  "REGISTRY": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Persistence and system configuration artifacts",
+    "runtimeOperation": "readSystemArtifacts",
+    "realtime": false
+  },
+  "REGISTRY_KEY": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Persistence and system configuration artifacts",
+    "runtimeOperation": "readSystemArtifacts",
+    "realtime": false
+  },
+  "REGISTRY_VALUE": {
+    "category": "COMPUTER_FORENSICS",
+    "type": "OBJECT",
+    "description": "Persistence and system configuration artifacts",
+    "runtimeOperation": "readSystemArtifacts",
+    "realtime": false
+  },
+  "MEMORY": {
+    "category": "MEMORY_FORENSICS",
+    "type": "OBJECT",
+    "description": "Memory-forensic artifacts",
+    "runtimeOperation": "readMemoryArtifacts",
+    "realtime": false
+  },
+  "MEMORY_IMAGE": {
+    "category": "MEMORY_FORENSICS",
+    "type": "OBJECT",
+    "description": "Memory-forensic artifacts",
+    "runtimeOperation": "readMemoryArtifacts",
+    "realtime": false
+  },
+  "MEMORY_REGION": {
+    "category": "MEMORY_FORENSICS",
+    "type": "OBJECT",
+    "description": "Memory-forensic artifacts",
+    "runtimeOperation": "readMemoryArtifacts",
+    "realtime": false
+  },
+  "MEMORY_MAP": {
+    "category": "MEMORY_FORENSICS",
+    "type": "OBJECT",
+    "description": "Memory-forensic artifacts",
+    "runtimeOperation": "readMemoryArtifacts",
+    "realtime": false
+  },
+  "LOADED_MODULE": {
+    "category": "MEMORY_FORENSICS",
+    "type": "OBJECT",
+    "description": "Memory-forensic artifacts",
+    "runtimeOperation": "readMemoryArtifacts",
+    "realtime": false
+  },
+  "DLL": {
+    "category": "MEMORY_FORENSICS",
+    "type": "OBJECT",
+    "description": "Memory-forensic artifacts",
+    "runtimeOperation": "readMemoryArtifacts",
+    "realtime": false
+  },
+  "HANDLE": {
+    "category": "MEMORY_FORENSICS",
+    "type": "OBJECT",
+    "description": "Memory-forensic artifacts",
+    "runtimeOperation": "readMemoryArtifacts",
+    "realtime": false
+  },
+  "KERNEL_MODULE": {
+    "category": "MEMORY_FORENSICS",
+    "type": "OBJECT",
+    "description": "Memory-forensic artifacts",
+    "runtimeOperation": "readMemoryArtifacts",
+    "realtime": false
+  },
+  "MEMORY_STRING": {
+    "category": "MEMORY_FORENSICS",
+    "type": "OBJECT",
+    "description": "Memory-forensic artifacts",
+    "runtimeOperation": "readMemoryArtifacts",
+    "realtime": false
+  },
+  "NETWORK": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network interface and addressing artifacts",
+    "runtimeOperation": "readInterfaces",
+    "realtime": false
+  },
+  "NETWORK_INTERFACE": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network interface and addressing artifacts",
+    "runtimeOperation": "readInterfaces",
+    "realtime": false
+  },
+  "NETWORK_INTERFACES": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network interface and addressing artifacts",
+    "runtimeOperation": "readInterfaces",
+    "realtime": false
+  },
+  "INTERFACE_NAME": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network interface and addressing artifacts",
+    "runtimeOperation": "readInterfaces",
+    "realtime": false
+  },
+  "INTERFACE_ADDRESS": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network interface and addressing artifacts",
+    "runtimeOperation": "readInterfaces",
+    "realtime": false
+  },
+  "INTERFACE_STATUS": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network interface and addressing artifacts",
+    "runtimeOperation": "readInterfaces",
+    "realtime": false
+  },
+  "MAC_ADDRESS": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network interface and addressing artifacts",
+    "runtimeOperation": "readInterfaces",
+    "realtime": false
+  },
+  "IP_ADDRESS": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network interface and addressing artifacts",
+    "runtimeOperation": "readInterfaces",
+    "realtime": false
+  },
+  "IP": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network interface and addressing artifacts",
+    "runtimeOperation": "readInterfaces",
+    "realtime": false
+  },
+  "IPV4": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network interface and addressing artifacts",
+    "runtimeOperation": "readInterfaces",
+    "realtime": false
+  },
+  "IPV6": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network interface and addressing artifacts",
+    "runtimeOperation": "readInterfaces",
+    "realtime": false
+  },
+  "SUBNET": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network interface and addressing artifacts",
+    "runtimeOperation": "readInterfaces",
+    "realtime": false
+  },
+  "GATEWAY": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network interface and addressing artifacts",
+    "runtimeOperation": "readInterfaces",
+    "realtime": false
+  },
+  "NETWORK_CONNECTION": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "NETWORK_CONNECTIONS": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "CONNECTION": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "CONNECTIONS": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "SOURCE_IP": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "DESTINATION_IP": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "SOURCE_PORT": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "DESTINATION_PORT": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "PORT": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "PROTOCOL": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "TCP": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "UDP": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "STATE": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "LOCAL_ADDRESS": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "REMOTE_ADDRESS": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "LOCAL_PORT": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "REMOTE_PORT": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "LISTENER": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "LISTENERS": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Host network connection artifacts",
+    "runtimeOperation": "readConnections",
+    "realtime": true
+  },
+  "PACKET": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Packet, flow and capture artifacts",
+    "runtimeOperation": "readPcap",
+    "realtime": false
+  },
+  "PACKETS": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Packet, flow and capture artifacts",
+    "runtimeOperation": "readPcap",
+    "realtime": false
+  },
+  "FLOW": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Packet, flow and capture artifacts",
+    "runtimeOperation": "readPcap",
+    "realtime": false
+  },
+  "FLOWS": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Packet, flow and capture artifacts",
+    "runtimeOperation": "readPcap",
+    "realtime": false
+  },
+  "PCAP": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Packet, flow and capture artifacts",
+    "runtimeOperation": "readPcap",
+    "realtime": false
+  },
+  "PCAP_FILE": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Packet, flow and capture artifacts",
+    "runtimeOperation": "readPcap",
+    "realtime": false
+  },
+  "CAPTURE": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Packet, flow and capture artifacts",
+    "runtimeOperation": "readPcap",
+    "realtime": false
+  },
+  "CAPTURE_FILE": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Packet, flow and capture artifacts",
+    "runtimeOperation": "readPcap",
+    "realtime": false
+  },
+  "FRAME": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Packet, flow and capture artifacts",
+    "runtimeOperation": "readPcap",
+    "realtime": false
+  },
+  "PAYLOAD_METADATA": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Packet, flow and capture artifacts",
+    "runtimeOperation": "readPcap",
+    "realtime": false
+  },
+  "PACKET_TIME": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Packet, flow and capture artifacts",
+    "runtimeOperation": "readPcap",
+    "realtime": false
+  },
+  "PACKET_LENGTH": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Packet, flow and capture artifacts",
+    "runtimeOperation": "readPcap",
+    "realtime": false
+  },
+  "DNS": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network protocol artifacts",
+    "runtimeOperation": "readNetworkArtifacts",
+    "realtime": false
+  },
+  "DNS_QUERY": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network protocol artifacts",
+    "runtimeOperation": "readNetworkArtifacts",
+    "realtime": false
+  },
+  "DNS_RESPONSE": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network protocol artifacts",
+    "runtimeOperation": "readNetworkArtifacts",
+    "realtime": false
+  },
+  "DNS_SERVER": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network protocol artifacts",
+    "runtimeOperation": "readNetworkArtifacts",
+    "realtime": false
+  },
+  "DOMAIN": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network protocol artifacts",
+    "runtimeOperation": "readNetworkArtifacts",
+    "realtime": false
+  },
+  "DOMAIN_NAME": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network protocol artifacts",
+    "runtimeOperation": "readNetworkArtifacts",
+    "realtime": false
+  },
+  "ARP": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network protocol artifacts",
+    "runtimeOperation": "readNetworkArtifacts",
+    "realtime": false
+  },
+  "ARP_ENTRY": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network protocol artifacts",
+    "runtimeOperation": "readNetworkArtifacts",
+    "realtime": false
+  },
+  "ROUTE": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network protocol artifacts",
+    "runtimeOperation": "readNetworkArtifacts",
+    "realtime": false
+  },
+  "ROUTES": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network protocol artifacts",
+    "runtimeOperation": "readNetworkArtifacts",
+    "realtime": false
+  },
+  "ROUTING_TABLE": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network protocol artifacts",
+    "runtimeOperation": "readNetworkArtifacts",
+    "realtime": false
+  },
+  "DHCP": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network protocol artifacts",
+    "runtimeOperation": "readNetworkArtifacts",
+    "realtime": false
+  },
+  "DHCP_LEASE": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network protocol artifacts",
+    "runtimeOperation": "readNetworkArtifacts",
+    "realtime": false
+  },
+  "NAT": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network protocol artifacts",
+    "runtimeOperation": "readNetworkArtifacts",
+    "realtime": false
+  },
+  "NAT_ENTRY": {
+    "category": "NETWORK_FORENSICS",
+    "type": "OBJECT",
+    "description": "Network protocol artifacts",
+    "runtimeOperation": "readNetworkArtifacts",
+    "realtime": false
+  },
+  "NETWORK_STATISTICS": {
+    "category": "NETWORK_ANALYSIS",
+    "type": "OBJECT",
+    "description": "Network measurement artifacts",
+    "runtimeOperation": "readNetworkStatistics",
+    "realtime": false
+  },
+  "BANDWIDTH": {
+    "category": "NETWORK_ANALYSIS",
+    "type": "OBJECT",
+    "description": "Network measurement artifacts",
+    "runtimeOperation": "readNetworkStatistics",
+    "realtime": false
+  },
+  "BYTE_COUNT": {
+    "category": "NETWORK_ANALYSIS",
+    "type": "OBJECT",
+    "description": "Network measurement artifacts",
+    "runtimeOperation": "readNetworkStatistics",
+    "realtime": false
+  },
+  "PACKET_COUNT": {
+    "category": "NETWORK_ANALYSIS",
+    "type": "OBJECT",
+    "description": "Network measurement artifacts",
+    "runtimeOperation": "readNetworkStatistics",
+    "realtime": false
+  },
+  "ERROR_COUNT": {
+    "category": "NETWORK_ANALYSIS",
+    "type": "OBJECT",
+    "description": "Network measurement artifacts",
+    "runtimeOperation": "readNetworkStatistics",
+    "realtime": false
+  },
+  "RETRANSMISSION": {
+    "category": "NETWORK_ANALYSIS",
+    "type": "OBJECT",
+    "description": "Network measurement artifacts",
+    "runtimeOperation": "readNetworkStatistics",
+    "realtime": false
+  },
+  "LATENCY": {
+    "category": "NETWORK_ANALYSIS",
+    "type": "OBJECT",
+    "description": "Network measurement artifacts",
+    "runtimeOperation": "readNetworkStatistics",
+    "realtime": false
+  },
+  "THROUGHPUT": {
+    "category": "NETWORK_ANALYSIS",
+    "type": "OBJECT",
+    "description": "Network measurement artifacts",
+    "runtimeOperation": "readNetworkStatistics",
+    "realtime": false
+  },
+  "GET": {
+    "category": "EVIDENCE",
+    "type": "COMMAND",
+    "description": "Read file metadata and cryptographic identity without modifying the file.",
+    "runtimeOperation": "getFile",
+    "realtime": false
+  },
+  "START": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Authorized real-time network observation controls",
+    "runtimeOperation": "startMonitor",
+    "realtime": true
+  },
+  "STOP": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Authorized real-time network observation controls",
+    "runtimeOperation": "startMonitor",
+    "realtime": true
+  },
+  "MONITOR": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Authorized real-time network observation controls",
+    "runtimeOperation": "startMonitor",
+    "realtime": true
+  },
+  "NETWORK_MONITOR": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Authorized real-time network observation controls",
+    "runtimeOperation": "startMonitor",
+    "realtime": true
+  },
+  "NETWORK_CAPTURE": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Authorized real-time network observation controls",
+    "runtimeOperation": "startMonitor",
+    "realtime": true
+  },
+  "NETWORK_STREAM": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Authorized real-time network observation controls",
+    "runtimeOperation": "startMonitor",
+    "realtime": true
+  },
+  "WATCH": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Authorized real-time network observation controls",
+    "runtimeOperation": "startMonitor",
+    "realtime": true
+  },
+  "LIVE": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Authorized real-time network observation controls",
+    "runtimeOperation": "startMonitor",
+    "realtime": true
+  },
+  "REALTIME": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Authorized real-time network observation controls",
+    "runtimeOperation": "startMonitor",
+    "realtime": true
+  },
+  "INTERVAL": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Authorized real-time network observation controls",
+    "runtimeOperation": "startMonitor",
+    "realtime": true
+  },
+  "SNAPSHOT": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Authorized real-time network observation controls",
+    "runtimeOperation": "startMonitor",
+    "realtime": true
+  },
+  "REFRESH": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Authorized real-time network observation controls",
+    "runtimeOperation": "startMonitor",
+    "realtime": true
+  },
+  "ON_EVENT": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Authorized real-time network observation controls",
+    "runtimeOperation": "startMonitor",
+    "realtime": true
+  },
+  "UNTIL": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Authorized real-time network observation controls",
+    "runtimeOperation": "startMonitor",
+    "realtime": true
+  },
+  "ALERT": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Read-only real-time observation rules",
+    "runtimeOperation": "configureWatch",
+    "realtime": true
+  },
+  "ALERTS": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Read-only real-time observation rules",
+    "runtimeOperation": "configureWatch",
+    "realtime": true
+  },
+  "THRESHOLD": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Read-only real-time observation rules",
+    "runtimeOperation": "configureWatch",
+    "realtime": true
+  },
+  "MATCH_RULE": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Read-only real-time observation rules",
+    "runtimeOperation": "configureWatch",
+    "realtime": true
+  },
+  "WATCH_CONNECTION": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Read-only real-time observation rules",
+    "runtimeOperation": "configureWatch",
+    "realtime": true
+  },
+  "WATCH_DNS": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Read-only real-time observation rules",
+    "runtimeOperation": "configureWatch",
+    "realtime": true
+  },
+  "WATCH_FLOW": {
+    "category": "REALTIME_NETWORK",
+    "type": "COMMAND",
+    "description": "Read-only real-time observation rules",
+    "runtimeOperation": "configureWatch",
+    "realtime": true
+  },
+  "TIMELINE": {
+    "category": "TIMELINE",
+    "type": "COMMAND",
+    "description": "Temporal analysis operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "CREATE_TIMELINE": {
+    "category": "TIMELINE",
+    "type": "COMMAND",
+    "description": "Temporal analysis operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "TIMELINE_EVENT": {
+    "category": "TIMELINE",
+    "type": "COMMAND",
+    "description": "Temporal analysis operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "TIMELINE_START": {
+    "category": "TIMELINE",
+    "type": "COMMAND",
+    "description": "Temporal analysis operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "TIMELINE_END": {
+    "category": "TIMELINE",
+    "type": "COMMAND",
+    "description": "Temporal analysis operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "TIMESTAMP": {
+    "category": "TIMELINE",
+    "type": "COMMAND",
+    "description": "Temporal analysis operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "TIMEZONE": {
+    "category": "TIMELINE",
+    "type": "COMMAND",
+    "description": "Temporal analysis operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "ORDER": {
+    "category": "TIMELINE",
+    "type": "COMMAND",
+    "description": "Temporal analysis operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "BEFORE": {
+    "category": "TIMELINE",
+    "type": "COMMAND",
+    "description": "Temporal analysis operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "AFTER": {
+    "category": "TIMELINE",
+    "type": "COMMAND",
+    "description": "Temporal analysis operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "DURATION": {
+    "category": "TIMELINE",
+    "type": "COMMAND",
+    "description": "Temporal analysis operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "HASH": {
+    "category": "INTEGRITY",
+    "type": "COMMAND",
+    "description": "Evidence integrity and verification operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "HASH_ALGORITHM": {
+    "category": "INTEGRITY",
+    "type": "COMMAND",
+    "description": "Evidence integrity and verification operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "SHA256": {
+    "category": "INTEGRITY",
+    "type": "COMMAND",
+    "description": "Evidence integrity and verification operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "SHA512": {
+    "category": "INTEGRITY",
+    "type": "COMMAND",
+    "description": "Evidence integrity and verification operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "MD5": {
+    "category": "INTEGRITY",
+    "type": "COMMAND",
+    "description": "Evidence integrity and verification operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "CHECKSUM": {
+    "category": "INTEGRITY",
+    "type": "COMMAND",
+    "description": "Evidence integrity and verification operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "VERIFY": {
+    "category": "INTEGRITY",
+    "type": "COMMAND",
+    "description": "Evidence integrity and verification operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "INTEGRITY": {
+    "category": "INTEGRITY",
+    "type": "COMMAND",
+    "description": "Evidence integrity and verification operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "SIGNATURE": {
+    "category": "INTEGRITY",
+    "type": "COMMAND",
+    "description": "Evidence integrity and verification operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "VERIFY_SIGNATURE": {
+    "category": "INTEGRITY",
+    "type": "COMMAND",
+    "description": "Evidence integrity and verification operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "REPORT": {
+    "category": "REPORTING",
+    "type": "COMMAND",
+    "description": "Reporting and export operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "REPORT_TITLE": {
+    "category": "REPORTING",
+    "type": "COMMAND",
+    "description": "Reporting and export operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "REPORT_SECTION": {
+    "category": "REPORTING",
+    "type": "COMMAND",
+    "description": "Reporting and export operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "SUMMARY": {
+    "category": "REPORTING",
+    "type": "COMMAND",
+    "description": "Reporting and export operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "DETAILS": {
+    "category": "REPORTING",
+    "type": "COMMAND",
+    "description": "Reporting and export operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "EVIDENCE_TABLE": {
+    "category": "REPORTING",
+    "type": "COMMAND",
+    "description": "Reporting and export operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "FINDINGS": {
+    "category": "REPORTING",
+    "type": "COMMAND",
+    "description": "Reporting and export operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "OBSERVATION": {
+    "category": "REPORTING",
+    "type": "COMMAND",
+    "description": "Reporting and export operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "EXPORT": {
+    "category": "REPORTING",
+    "type": "COMMAND",
+    "description": "Reporting and export operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "FORMAT": {
+    "category": "REPORTING",
+    "type": "COMMAND",
+    "description": "Reporting and export operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "JSON": {
+    "category": "REPORTING",
+    "type": "COMMAND",
+    "description": "Reporting and export operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "CSV": {
+    "category": "REPORTING",
+    "type": "COMMAND",
+    "description": "Reporting and export operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "HTML": {
+    "category": "REPORTING",
+    "type": "COMMAND",
+    "description": "Reporting and export operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "TEXT": {
+    "category": "REPORTING",
+    "type": "COMMAND",
+    "description": "Reporting and export operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "PDF": {
+    "category": "REPORTING",
+    "type": "COMMAND",
+    "description": "Reporting and export operations",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "READ": {
+    "category": "DATA_OPERATIONS",
+    "type": "COMMAND",
+    "description": "Data handling operations; execution policy may restrict mutating actions",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "WRITE": {
+    "category": "DATA_OPERATIONS",
+    "type": "COMMAND",
+    "description": "Data handling operations; execution policy may restrict mutating actions",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "PARSE": {
+    "category": "DATA_OPERATIONS",
+    "type": "COMMAND",
+    "description": "Data handling operations; execution policy may restrict mutating actions",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "NORMALIZE": {
+    "category": "DATA_OPERATIONS",
+    "type": "COMMAND",
+    "description": "Data handling operations; execution policy may restrict mutating actions",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "DECODE": {
+    "category": "DATA_OPERATIONS",
+    "type": "COMMAND",
+    "description": "Data handling operations; execution policy may restrict mutating actions",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "EXTRACT": {
+    "category": "DATA_OPERATIONS",
+    "type": "COMMAND",
+    "description": "Data handling operations; execution policy may restrict mutating actions",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "RECORD": {
+    "category": "DATA_OPERATIONS",
+    "type": "COMMAND",
+    "description": "Data handling operations; execution policy may restrict mutating actions",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "TAG": {
+    "category": "DATA_OPERATIONS",
+    "type": "COMMAND",
+    "description": "Data handling operations; execution policy may restrict mutating actions",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "ANNOTATE": {
+    "category": "DATA_OPERATIONS",
+    "type": "COMMAND",
+    "description": "Data handling operations; execution policy may restrict mutating actions",
+    "runtimeOperation": null,
+    "realtime": false
+  },
+  "REDACT": {
+    "category": "DATA_OPERATIONS",
+    "type": "COMMAND",
+    "description": "Data handling operations; execution policy may restrict mutating actions",
+    "runtimeOperation": null,
+    "realtime": false
+  }
+}
+
+
+
