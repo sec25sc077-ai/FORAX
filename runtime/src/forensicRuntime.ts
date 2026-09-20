@@ -483,7 +483,13 @@ class ForensicRuntime {
       PARENT_PID: "parentPid",
       PROCESS_NAME: "processName",
       COMMAND_LINE: "commandLine",
-      EXECUTABLE_PATH: "executablePath"
+      EXECUTABLE_PATH: "executablePath",
+      HOSTNAME: "computerName",
+      MANUFACTURER: "manufacturer",
+      MODEL: "model",
+      SERIAL_NUMBER: "serialNumber",
+      BIOS_VERSION: "biosVersion",
+      OPERATING_SYSTEM: "operatingSystem"
     };
 
     const runtimeField =

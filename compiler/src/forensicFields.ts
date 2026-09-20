@@ -180,6 +180,36 @@ export const FORENSIC_FIELDS: ForensicFieldDefinition[] = [
     description: "Host or device name."
   },
   {
+    field: "MANUFACTURER",
+    type: "STRING",
+    objects: ["DEVICE"],
+    description: "Device manufacturer."
+  },
+  {
+    field: "MODEL",
+    type: "STRING",
+    objects: ["DEVICE"],
+    description: "Device model."
+  },
+  {
+    field: "SERIAL_NUMBER",
+    type: "STRING",
+    objects: ["DEVICE"],
+    description: "Device or BIOS serial number."
+  },
+  {
+    field: "BIOS_VERSION",
+    type: "STRING",
+    objects: ["DEVICE"],
+    description: "System BIOS version."
+  },
+  {
+    field: "OPERATING_SYSTEM",
+    type: "STRING",
+    objects: ["DEVICE"],
+    description: "Operating-system name reported by the host."
+  },
+  {
     field: "STATUS",
     type: "STRING",
     objects: [
@@ -224,6 +254,7 @@ export function getFieldsForObject(
       definition.objects.includes(normalized)
   );
 }
+
 
 
 

@@ -1,4 +1,4 @@
-﻿import { lex } from "../compiler/src/lexer";
+import { lex } from "../compiler/src/lexer";
 import { Parser } from "../compiler/src/parser";
 import { checkProgram } from "../compiler/src/typeChecker";
 import { loadAliases } from "../compiler/src/dictionary";
