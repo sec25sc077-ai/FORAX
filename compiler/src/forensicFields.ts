@@ -122,25 +122,25 @@ export const FORENSIC_FIELDS: ForensicFieldDefinition[] = [
   {
     field: "PID",
     type: "INTEGER",
-    objects: ["PROCESS"],
+    objects: ["PROCESS", "NETWORK_CONNECTION"],
     description: "Operating-system process identifier."
   },
   {
     field: "PARENT_PID",
     type: "INTEGER",
-    objects: ["PROCESS"],
+    objects: ["PROCESS", "NETWORK_CONNECTION"],
     description: "Parent operating-system process identifier."
   },
   {
     field: "PROCESS_NAME",
     type: "STRING",
-    objects: ["PROCESS"],
+    objects: ["PROCESS", "NETWORK_CONNECTION"],
     description: "Process executable or display name."
   },
   {
     field: "COMMAND_LINE",
     type: "STRING",
-    objects: ["PROCESS"],
+    objects: ["PROCESS", "NETWORK_CONNECTION"],
     description: "Process command line."
   },
   {
@@ -254,6 +254,8 @@ export function getFieldsForObject(
       definition.objects.includes(normalized)
   );
 }
+
+
 
 
 
