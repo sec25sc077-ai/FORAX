@@ -489,7 +489,13 @@ class ForensicRuntime {
       MODEL: "model",
       SERIAL_NUMBER: "serialNumber",
       BIOS_VERSION: "biosVersion",
-      OPERATING_SYSTEM: "operatingSystem"
+      OPERATING_SYSTEM: "operatingSystem",
+      SOURCE_IP: "localAddress",
+      DESTINATION_IP: "remoteAddress",
+      SOURCE_PORT: "localPort",
+      DESTINATION_PORT: "remotePort",
+      PROTOCOL: "protocol",
+      STATUS: "state"
     };
 
     const runtimeField =
