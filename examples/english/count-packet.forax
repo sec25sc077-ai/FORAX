@@ -1,0 +1,4 @@
+﻿CASE "PACKET-COUNT-001"
+LOAD PCAP "capture-real.pcap"
+COUNT PACKET
+REPORT
