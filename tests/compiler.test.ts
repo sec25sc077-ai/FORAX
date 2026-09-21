@@ -1,4 +1,4 @@
-﻿import assert from "node:assert/strict";
+import assert from "node:assert/strict";
 import { lex } from "../compiler/src/lexer";
 import { loadAliases } from "../compiler/src/dictionary";
 import { Parser } from "../compiler/src/parser";
@@ -94,7 +94,7 @@ const correlationTs = generateTypeScript(correlationAst);
 
 assert.match(
   correlationTs,
-  /forensicRuntime\.correlateProcessNetwork\(\)/
+  /forensicRuntime\.correlateProcessNetwork\(undefined\)/
 );
 const countSource = `CASE "COUNT-001"
 COLLECT PROCESS
@@ -177,6 +177,7 @@ for (const [language, source] of Object.entries(summarizeMultilingualSamples)) {
   );
 }
 console.log("Phase 3 compiler tests passed.");
+
 
 
 
