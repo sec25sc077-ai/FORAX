@@ -77,6 +77,7 @@ export interface CorrelateStatement {
   type: "CorrelateStatement";
   leftObject: string;
   rightObject: string;
+  where?: WhereClause;
 }
 
 export interface FilterStatement {
@@ -183,6 +184,7 @@ export interface TypedValue {
   type: ForaxType;
   value: string | number | boolean;
 }
+
 
 
 

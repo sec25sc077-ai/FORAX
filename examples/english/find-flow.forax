@@ -1,0 +1,4 @@
+﻿CASE "FLOW-001"
+LOAD PCAP "capture-real.pcap"
+FIND FLOW
+REPORT

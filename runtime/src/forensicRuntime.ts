@@ -108,6 +108,54 @@ class ForensicRuntime {
       })
     );
 
+    const flowMap = new Map<string, {
+      SOURCE_IP?: string;
+      DESTINATION_IP?: string;
+      SOURCE_PORT?: number;
+      DESTINATION_PORT?: number;
+      PROTOCOL?: string;
+      PACKET_COUNT: number;
+      TOTAL_BYTES: number;
+    }>();
+
+    for (const packet of this.evidence.PACKET as Array<Record<string, unknown>>) {
+      const key = [
+        packet.SOURCE_IP ?? "",
+        packet.SOURCE_PORT ?? "",
+        packet.DESTINATION_IP ?? "",
+        packet.DESTINATION_PORT ?? "",
+        packet.PROTOCOL ?? ""
+      ].join("|");
+
+      const existing = flowMap.get(key);
+
+      if (existing) {
+        existing.PACKET_COUNT += 1;
+        existing.TOTAL_BYTES += Number(
+          packet.PACKET_LENGTH ??
+          packet.CAPTURED_LENGTH ??
+          packet.ORIGINAL_LENGTH ??
+          0
+        );
+      } else {
+        flowMap.set(key, {
+          SOURCE_IP: packet.SOURCE_IP as string | undefined,
+          DESTINATION_IP: packet.DESTINATION_IP as string | undefined,
+          SOURCE_PORT: packet.SOURCE_PORT as number | undefined,
+          DESTINATION_PORT: packet.DESTINATION_PORT as number | undefined,
+          PROTOCOL: packet.PROTOCOL as string | undefined,
+          PACKET_COUNT: 1,
+          TOTAL_BYTES: Number(
+            packet.PACKET_LENGTH ??
+            packet.CAPTURED_LENGTH ??
+            packet.ORIGINAL_LENGTH ??
+            0
+          )
+        });
+      }
+    }
+
+    this.evidence.FLOW = Array.from(flowMap.values());
     return this.record("LOAD_PCAP", "PCAP", {
       status: "LOADED",
       filePath: pcap.filePath,
@@ -294,7 +342,7 @@ class ForensicRuntime {
     });
   }
 
-  async correlateProcessNetwork(): Promise<ForensicResult> {
+  async correlateProcessNetwork(query?: WhereQuery): Promise<ForensicResult> {
     const processes = this.evidence.PROCESS ?? [];
     const connections =
       this.evidence.NETWORK_CONNECTION ?? [];
@@ -365,9 +413,9 @@ class ForensicRuntime {
         status: "COMPLETED",
         correlationType:
           "PROCESS_NETWORK_PID",
-        matchedCount:
-          correlations.length,
-        results: correlations
+        query: query ?? null,
+          matchedCount: (query ? this.applyQuery(correlations, query) : correlations).length,
+          results: (query ? this.applyQuery(correlations, query) : correlations)
       }
     );
   }
@@ -497,13 +545,18 @@ class ForensicRuntime {
       PROTOCOL: "protocol",
       STATUS: "state"
     };
+      const canonicalField = field.toUpperCase();
 
-    const runtimeField =
-      fieldMap[field.toUpperCase()] ?? field;
+      if (row[canonicalField] !== undefined) {
+        return row[canonicalField];
+      }
 
-    if (row[runtimeField] !== undefined) {
-      return row[runtimeField];
-    }
+      const runtimeField =
+        fieldMap[canonicalField] ?? field;
+
+      if (row[runtimeField] !== undefined) {
+        return row[runtimeField];
+      }
 
     const normalized =
       runtimeField.toLowerCase();

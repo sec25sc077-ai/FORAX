@@ -55,7 +55,7 @@ function generateStatement(statement: Statement): string[] {
 
     case "CorrelateStatement":
       return [
-        "await forensicRuntime.correlateProcessNetwork();"
+          `await forensicRuntime.correlateProcessNetwork(${whereArg(statement.where)});`
       ];
     case "SummarizeProcessStatement":
       return [

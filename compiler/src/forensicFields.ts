@@ -86,13 +86,13 @@ export const FORENSIC_FIELDS: ForensicFieldDefinition[] = [
   {
     field: "SOURCE_IP",
     type: "IP_ADDRESS",
-    objects: ["PACKET", "NETWORK_CONNECTION"],
+    objects: ["PACKET", "NETWORK_CONNECTION", "FLOW"],
     description: "Source IP address."
   },
   {
     field: "DESTINATION_IP",
     type: "IP_ADDRESS",
-    objects: ["PACKET", "NETWORK_CONNECTION"],
+    objects: ["PACKET", "NETWORK_CONNECTION", "FLOW"],
     description: "Destination IP address."
   },
   {
@@ -104,20 +104,32 @@ export const FORENSIC_FIELDS: ForensicFieldDefinition[] = [
   {
     field: "PROTOCOL",
     type: "PROTOCOL",
-    objects: ["PACKET", "NETWORK_CONNECTION"],
+    objects: ["PACKET", "NETWORK_CONNECTION", "FLOW"],
     description: "Network transport or control protocol."
   },
   {
     field: "SOURCE_PORT",
     type: "PORT",
-    objects: ["PACKET", "NETWORK_CONNECTION"],
+    objects: ["PACKET", "NETWORK_CONNECTION", "FLOW"],
     description: "Source transport-layer port."
   },
   {
     field: "DESTINATION_PORT",
     type: "PORT",
-    objects: ["PACKET", "NETWORK_CONNECTION"],
+    objects: ["PACKET", "NETWORK_CONNECTION", "FLOW"],
     description: "Destination transport-layer port."
+  },
+  {
+    field: "PACKET_COUNT",
+    type: "INTEGER",
+    objects: ["FLOW"],
+    description: "Number of packets belonging to the network flow."
+  },
+  {
+    field: "TOTAL_BYTES",
+    type: "INTEGER",
+    objects: ["FLOW"],
+    description: "Total captured bytes belonging to the network flow."
   },
   {
     field: "PID",

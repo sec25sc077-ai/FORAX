@@ -1,0 +1,5 @@
+﻿CASE "FLOW-IP-001"
+LOAD PCAP "capture-real.pcap"
+FIND FLOW
+WHERE SOURCE_IP == "192.168.1.10"
+REPORT

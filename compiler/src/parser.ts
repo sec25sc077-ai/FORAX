@@ -216,10 +216,19 @@ export class Parser {
 
     const rightObject = this.object();
 
+    this.skipNewlines();
+
+    let where: WhereClause | undefined;
+
+    if (this.match("WHERE")) {
+      where = this.whereClause();
+    }
+
     return {
       type: "CorrelateStatement",
       leftObject,
-      rightObject
+      rightObject,
+      where
     };
   }
 
