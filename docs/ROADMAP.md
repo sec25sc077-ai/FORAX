@@ -8,4 +8,4 @@ Phase 5 - Computer forensics + offline PCAP + authorized real-time network runti
 Phase 6 - Expand and test 100-200+ canonical keywords
 Phase 7 - AI suggestion/validation layer
 Phase 8 - Desktop forensic IDE
-Phase 9 - Testing, packaging and SIH demonstration
+Phase 9 - Testing and packaging
