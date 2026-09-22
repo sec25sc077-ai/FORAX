@@ -57,7 +57,6 @@ export class Parser {
       case "FILTER":
         return this.filterStatement();
 
-      case "FILTER":
         return this.filterStatement();
 
       case "SUMMARIZE":

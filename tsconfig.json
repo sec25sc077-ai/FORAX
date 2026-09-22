@@ -12,8 +12,10 @@
   },
   "include": [
     "compiler/**/*.ts",
+    "ai/**/*.ts",
     "tests/**/*.ts"
   ]
 }
+
 
 
