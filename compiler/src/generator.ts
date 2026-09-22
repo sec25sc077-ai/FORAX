@@ -89,16 +89,35 @@ function generateStatement(statement: Statement): string[] {
         `await forensicRuntime.watch(${JSON.stringify(statement.object)});`
       ];
 
-    case "HashFileStatement":
-      return [
-        `await forensicRuntime.hashFile(${JSON.stringify(statement.path)});`
-      ];
+    case "HashStatement":
+      if (statement.object === "FILE") {
+        return [
+          `await forensicRuntime.hashFile(${JSON.stringify(statement.path)});`
+        ];
+      }
 
-    case "VerifyFileStatement":
-      return [
-        `await forensicRuntime.verifyFile(${JSON.stringify(statement.path)}, ${JSON.stringify(statement.expectedHash)});`
-      ];
+      if (statement.object === "PCAP") {
+        return [
+          `await forensicRuntime.hashPcap(${JSON.stringify(statement.path)});`
+        ];
+      }
 
+      throw new Error(`Unsupported HASH object: ${statement.object}`);
+
+    case "VerifyStatement":
+      if (statement.object === "FILE") {
+        return [
+          `await forensicRuntime.verifyFile(${JSON.stringify(statement.path)}, ${JSON.stringify(statement.expectedHash)});`
+        ];
+      }
+
+      if (statement.object === "PCAP") {
+        return [
+          `await forensicRuntime.verifyPcap(${JSON.stringify(statement.path)}, ${JSON.stringify(statement.expectedHash)});`
+        ];
+      }
+
+      throw new Error(`Unsupported VERIFY object: ${statement.object}`);
     case "GetProcessStatement":
       return [
         `await forensicRuntime.getProcess(${statement.pid});`
@@ -131,6 +150,7 @@ function whereArg(where?: WhereClause): string {
     operators: where.operators
   });
 }
+
 
 
 

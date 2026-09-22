@@ -118,13 +118,31 @@ async function executeStatement(
     case "StopNetworkMonitorStatement":
       await forensicRuntime.stopNetworkMonitor();
       break;
-
-    case "HashFileStatement":
-      await forensicRuntime.hashFile(
-        statement.path
-      );
+    case "HashStatement":
+      if (statement.object === "FILE") {
+        await forensicRuntime.hashFile(
+          statement.path
+        );
+      } else if (statement.object === "PCAP") {
+        await forensicRuntime.hashPcap(
+          statement.path
+        );
+      }
       break;
 
+    case "VerifyStatement":
+      if (statement.object === "FILE") {
+        await forensicRuntime.verifyFile(
+          statement.path,
+          statement.expectedHash
+        );
+      } else if (statement.object === "PCAP") {
+        await forensicRuntime.verifyPcap(
+          statement.path,
+          statement.expectedHash
+        );
+      }
+      break;
     case "SearchFileStatement":
       await forensicRuntime.searchFile(
         statement.directory,
@@ -167,6 +185,10 @@ async function executeStatement(
       );
   }
 }
+
+
+
+
 
 
 

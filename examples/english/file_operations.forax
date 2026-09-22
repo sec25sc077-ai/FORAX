@@ -1,0 +1,6 @@
+﻿CASE "FILE-001"
+HASH FILE "examples/english/basic.forax"
+VERIFY FILE "examples/english/basic.forax" "PLACEHOLDER"
+SEARCH FILE "examples/english" "*.forax"
+GET FILE "examples/english/basic.forax"
+REPORT

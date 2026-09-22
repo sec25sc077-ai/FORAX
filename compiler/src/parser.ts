@@ -346,9 +346,17 @@ export class Parser {
 
   private hashFileStatement(): Statement {
     this.consume("HASH");
-    this.consume("FILE");
-    const path = this.consumeAny("STRING","IDENTIFIER").value;
-    return { type: "HashFileStatement", path };
+
+    const object = this.object();
+
+    const path =
+      this.consumeAny("STRING", "IDENTIFIER").value;
+
+    return {
+      type: "HashStatement",
+      object: object as "FILE" | "PCAP",
+      path
+    };
   }
   private searchFileStatement(): Statement {
     this.consume("SEARCH");
@@ -369,7 +377,8 @@ export class Parser {
 
   private verifyFileStatement(): Statement {
     this.consume("VERIFY");
-    this.consume("FILE");
+
+    const object = this.object();
 
     const path =
       this.consumeAny("STRING", "IDENTIFIER").value;
@@ -378,7 +387,8 @@ export class Parser {
       this.consumeAny("STRING", "IDENTIFIER").value;
 
     return {
-      type: "VerifyFileStatement",
+      type: "VerifyStatement",
+      object: object as "FILE" | "PCAP",
       path,
       expectedHash
     };
@@ -563,6 +573,9 @@ export class Parser {
     );
   }
 }
+
+
+
 
 
 

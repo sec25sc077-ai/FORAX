@@ -1,4 +1,4 @@
-﻿import fs from "fs";
+import fs from "fs";
 import crypto from "crypto";
 import { lex } from "../compiler/src/lexer";
 import { loadAliases } from "../compiler/src/dictionary";
@@ -7,7 +7,7 @@ import { checkProgram } from "../compiler/src/typeChecker";
 import { generateTypeScript } from "../compiler/src/generator";
 import { forensicRuntime } from "../runtime/src/forensicRuntime";
 
-async function main(): Promise<void> {
+async function testHashFile(): Promise<void> {
   const testFile = "tests/hash-test.txt";
   const testContent = "FORAX HASH FILE TEST";
 
@@ -60,11 +60,73 @@ async function main(): Promise<void> {
 
   fs.unlinkSync(testFile);
 
-  console.log("PASS: HASH FILE parsed successfully.");
-  console.log("PASS: HASH_FILE operation validated.");
-  console.log("PASS: TypeScript generator emitted forensicRuntime.hashFile().");
-  console.log(`PASS: SHA-256 verified: ${data.sha256}`);
-  console.log("FORAX HASH FILE end-to-end test passed.");
+  console.log("PASS: HASH FILE end-to-end test.");
+}
+
+async function testHashPcap(): Promise<void> {
+  const testPcap = "capture-real.pcap";
+
+  const source = `HASH PCAP "${testPcap}"`;
+
+  const aliases = loadAliases("english");
+  const tokens = lex(source, aliases);
+  const program = new Parser(tokens).parse();
+
+  checkProgram(program);
+
+  const generated = generateTypeScript(program);
+
+  if (!generated.includes("forensicRuntime.hashPcap")) {
+    throw new Error(
+      "Generated TypeScript does not contain forensicRuntime.hashPcap()."
+    );
+  }
+
+  const expectedHash = crypto
+    .createHash("sha256")
+    .update(fs.readFileSync(testPcap))
+    .digest("hex");
+
+  const result = await forensicRuntime.hashPcap(testPcap);
+
+  const data = result.data as {
+    sha256: string;
+    sizeBytes: number;
+    filePath: string;
+  };
+
+  if (data.sha256 !== expectedHash) {
+    throw new Error(
+      `PCAP SHA-256 mismatch. Expected ${expectedHash}, received ${data.sha256}`
+    );
+  }
+
+  const actualSize = fs.statSync(testPcap).size;
+
+  if (data.sizeBytes !== actualSize) {
+    throw new Error(
+      `PCAP size mismatch. Expected ${actualSize}, received ${data.sizeBytes}`
+    );
+  }
+
+  if (data.filePath !== testPcap) {
+    throw new Error(
+      `PCAP path mismatch. Expected ${testPcap}, received ${data.filePath}`
+    );
+  }
+
+  console.log("PASS: HASH PCAP parsed successfully.");
+  console.log("PASS: HASH_PCAP operation validated.");
+  console.log("PASS: TypeScript generator emitted forensicRuntime.hashPcap().");
+  console.log(`PASS: PCAP SHA-256 verified: ${data.sha256}`);
+  console.log("FORAX HASH PCAP end-to-end test passed.");
+}
+
+async function main(): Promise<void> {
+  await testHashFile();
+  await testHashPcap();
+
+  console.log("FORAX HASH FILE + HASH PCAP tests passed.");
 }
 
 main().catch((error) => {

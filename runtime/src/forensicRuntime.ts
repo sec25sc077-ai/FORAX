@@ -166,6 +166,17 @@ class ForensicRuntime {
     });
   }
 
+  async hashPcap(filePath: string): Promise<ForensicResult> {
+    const pcap: PcapEvidence =
+      await collectPcap(filePath);
+
+    return this.record("HASH_PCAP", "PCAP", {
+      status: "HASHED",
+      filePath: pcap.filePath,
+      sizeBytes: pcap.sizeBytes,
+      sha256: pcap.sha256
+    });
+  }
   async collect(object: string): Promise<ForensicResult> {
     switch (object) {
       case "PROCESS": {
@@ -645,7 +656,32 @@ private compare(
       verified
     });
   }
-    async searchFile(
+    async verifyPcap(
+    filePath: string,
+    expectedHash: string
+  ): Promise<ForensicResult> {
+    const evidence: PcapEvidence =
+      await collectPcap(filePath);
+
+    const normalizedExpectedHash =
+      expectedHash.trim().toLowerCase();
+
+    const actualHash =
+      evidence.sha256.toLowerCase();
+
+    const verified =
+      actualHash === normalizedExpectedHash;
+
+    return this.record("VERIFY_PCAP", "PCAP", {
+      status: verified ? "VERIFIED" : "MISMATCH",
+      filePath,
+      expectedHash: normalizedExpectedHash,
+      actualHash,
+      verified
+    });
+  }
+
+  async searchFile(
       directory: string,
       pattern: string
     ): Promise<ForensicResult> {
@@ -936,6 +972,8 @@ private compare(
 
 export const forensicRuntime =
   new ForensicRuntime();
+
+
 
 
 

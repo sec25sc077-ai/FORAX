@@ -35,11 +35,11 @@ export type Statement =
   | StopNetworkMonitorStatement
   | WatchStatement
   | MonitorNetworkStatement
-  | HashFileStatement
+  | HashStatement
   | GetFileStatement
   | SearchFileStatement
   | GetProcessStatement
-  | VerifyFileStatement;
+  | VerifyStatement;
 
 
 export interface CaseStatement {
@@ -113,16 +113,18 @@ export interface MonitorNetworkStatement {
   durationSeconds: number;
 }
 
-export interface HashFileStatement {
-  type: "HashFileStatement";
+export interface HashStatement {
+  type: "HashStatement";
+  object: "FILE" | "PCAP";
   path: string;
 }
 
-  export interface VerifyFileStatement {
-    type: "VerifyFileStatement";
-    path: string;
-    expectedHash: string;
-  }
+export interface VerifyStatement {
+  type: "VerifyStatement";
+  object: "FILE" | "PCAP";
+  path: string;
+  expectedHash: string;
+}
 export interface SearchFileStatement {
   type: "SearchFileStatement";
   directory: string;
@@ -184,6 +186,10 @@ export interface TypedValue {
   type: ForaxType;
   value: string | number | boolean;
 }
+
+
+
+
 
 
 

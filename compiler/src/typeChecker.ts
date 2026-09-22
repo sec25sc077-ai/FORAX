@@ -261,10 +261,16 @@ function checkStatement(
       );
       return;
 
-    case "HashFileStatement":
-      assertOperation(
-        "HASH_FILE"
-      );
+    case "HashStatement":
+      if (statement.object === "FILE") {
+        assertOperation(
+          "HASH_FILE"
+        );
+      } else if (statement.object === "PCAP") {
+        assertOperation(
+          "HASH_PCAP"
+        );
+      }
       return;
 
     case "SearchFileStatement":
@@ -440,6 +446,7 @@ function valueType(
 
   return "STRING";
 }
+
 
 
 

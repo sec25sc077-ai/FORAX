@@ -415,8 +415,27 @@ export const FORAX_OPERATIONS: ForaxOperationDefinition[] = [
     output: "HASH",
     objects: ["FILE"]
   },
+  {
+    name: "HASH_PCAP",
+    category: "EVIDENCE",
+    description: "Calculate the SHA-256 hash of a PCAP evidence file without modifying it.",
+    runtimeMethod: "hashPcap",
+    safety: "READ_ONLY",
+    input: "PCAP",
+    output: "HASH",
+    objects: ["PCAP"]
+  },
 
       {
+      name: "VERIFY_PCAP",
+      category: "EVIDENCE",
+      description: "Verify a PCAP evidence file against an expected SHA-256 hash without modifying it.",
+      runtimeMethod: "verifyPcap",
+      safety: "READ_ONLY",
+      input: "PCAP + HASH",
+      output: "REPORT",
+      objects: ["PCAP"]
+    },    {
       name: "VERIFY_FILE",
       category: "EVIDENCE",
       description: "Verify a file against an expected SHA-256 hash without modifying it.",
@@ -479,6 +498,8 @@ export function getOperationsByCategory(
     (operation) => operation.category === category
   );
 }
+
+
 
 
 
