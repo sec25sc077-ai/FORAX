@@ -21,3 +21,4 @@ export function suggestForax(input: string): AiSuggestion {
   };
 }
 
+
