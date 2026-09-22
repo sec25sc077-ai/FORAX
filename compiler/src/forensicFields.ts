@@ -1,4 +1,4 @@
-export type ForensicFieldType =
+﻿export type ForensicFieldType =
   | "STRING"
   | "INTEGER"
   | "FLOAT"
@@ -19,7 +19,8 @@ export type ForensicFieldType =
   | "HASH"
   | "EVIDENCE"
   | "TIMELINE"
-  | "REPORT";
+  | "REPORT"
+  | "MEMORY";
 
 export interface ForensicFieldDefinition {
   field: string;
@@ -243,6 +244,18 @@ export const FORENSIC_FIELDS: ForensicFieldDefinition[] = [
     type: "STRING",
     objects: ["TIMELINE"],
     description: "Canonical type of timeline event."
+  },
+  {
+    field: "MEMORY_SIZE",
+    type: "INTEGER",
+    objects: ["MEMORY"],
+    description: "Size of collected memory evidence in bytes."
+  },
+  {
+    field: "MEMORY_PATH",
+    type: "STRING",
+    objects: ["MEMORY"],
+    description: "Path to the memory evidence image."
   }
 ];
 export function getForensicField(
@@ -266,6 +279,8 @@ export function getFieldsForObject(
       definition.objects.includes(normalized)
   );
 }
+
+
 
 
 

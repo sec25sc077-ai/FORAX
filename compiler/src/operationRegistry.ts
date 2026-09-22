@@ -1,4 +1,4 @@
-export type ForaxOperationCategory =
+﻿export type ForaxOperationCategory =
   | "CASE"
   | "COLLECTION"
   | "NETWORK"
@@ -498,6 +498,7 @@ export function getOperationsByCategory(
     (operation) => operation.category === category
   );
 }
+
 
 
 

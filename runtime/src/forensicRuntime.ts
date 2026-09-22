@@ -1,8 +1,9 @@
-import { collectProcesses } from "./collectors/processCollector";
+﻿import { collectProcesses } from "./collectors/processCollector";
 import { collectUsers } from "./collectors/userCollector";
 import { collectDevice } from "./collectors/deviceCollector";
 import { collectNetworkConnections } from "./collectors/networkCollector";
 import { collectPcap, PcapEvidence } from "./collectors/pcapCollector";
+import { collectMemory, MemoryEvidence } from "./collectors/memoryCollector";
 import { NetworkMonitor } from "./collectors/networkMonitor";
 import { ProcessMonitor } from "./collectors/processMonitor";
 import { hashFile as calculateFileHash } from "./evidence/hashFile";
@@ -234,6 +235,17 @@ class ForensicRuntime {
           status: "COLLECTED",
           count: 1,
           devices: [device]
+        });
+      }
+      case "MEMORY": {
+        const memory: MemoryEvidence = await collectMemory();
+
+        this.evidence.MEMORY = [memory];
+
+        return this.record("COLLECT", object, {
+          status: "COLLECTED",
+          count: 1,
+          memory: [memory]
         });
       }
       default:
@@ -972,6 +984,8 @@ private compare(
 
 export const forensicRuntime =
   new ForensicRuntime();
+
+
 
 
 
