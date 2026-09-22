@@ -1,4 +1,4 @@
-export type TokenType =
+﻿export type TokenType =
   | "KEYWORD"
   | "IDENTIFIER"
   | "STRING"
@@ -177,6 +177,7 @@ export type ForaxType =
   | "FLOW"
   | "PCAP"
   | "TIMELINE"
+  | "MEMORY"
   | "EVIDENCE"
   | "REPORT"
 
@@ -186,6 +187,9 @@ export interface TypedValue {
   type: ForaxType;
   value: string | number | boolean;
 }
+
+
+
 
 
 

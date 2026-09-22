@@ -85,6 +85,16 @@ export const FORAX_OPERATIONS: ForaxOperationDefinition[] = [
     output: "DEVICE[]",
     objects: ["DEVICE"]
   },
+  {
+    name: "COLLECT_MEMORY",
+    category: "COLLECTION",
+    description: "Collect authorized volatile-memory forensic evidence.",
+    runtimeMethod: "collect",
+    safety: "READ_ONLY",
+    input: "MEMORY",
+    output: "MEMORY[]",
+    objects: ["MEMORY"]
+  },
 
   {
     name: "LOAD_PCAP",
@@ -307,6 +317,16 @@ export const FORAX_OPERATIONS: ForaxOperationDefinition[] = [
     objects: ["DEVICE"]
   },
   {
+    name: "FIND_MEMORY",
+    category: "ANALYSIS",
+    description: "Query collected memory forensic evidence.",
+    runtimeMethod: "find",
+    safety: "READ_ONLY",
+    input: "MEMORY",
+    output: "MEMORY[]",
+    objects: ["MEMORY"]
+  },
+  {
     name: "FILTER_DEVICE",
     category: "ANALYSIS",
     description: "Filter collected device evidence.",
@@ -498,6 +518,8 @@ export function getOperationsByCategory(
     (operation) => operation.category === category
   );
 }
+
+
 
 
 

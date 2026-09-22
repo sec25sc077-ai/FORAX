@@ -1,4 +1,4 @@
-import { ForaxError } from "./errors";
+﻿import { ForaxError } from "./errors";
 import { Token, Program, Statement, WhereClause, Condition } from "./types";
 
 const OBJECTS = new Set([
@@ -10,7 +10,8 @@ const OBJECTS = new Set([
   "PACKET",
   "FLOW",
   "PCAP",
-  "TIMELINE"
+  "TIMELINE",
+  "MEMORY"
 ]);
 
 export class Parser {
@@ -573,6 +574,9 @@ export class Parser {
     );
   }
 }
+
+
+
 
 
 

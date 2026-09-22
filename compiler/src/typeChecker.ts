@@ -1,4 +1,4 @@
-import { ForaxError } from "./errors";
+﻿import { ForaxError } from "./errors";
 import {
   Program,
   Statement,
@@ -21,7 +21,8 @@ const OBJECT_TYPES = new Set<ForaxType>([
   "PACKET",
   "FLOW",
   "PCAP",
-  "TIMELINE"
+  "TIMELINE",
+  "MEMORY"
 ]);
 
 const COMPARABLE: Record<
@@ -446,6 +447,8 @@ function valueType(
 
   return "STRING";
 }
+
+
 
 
 
