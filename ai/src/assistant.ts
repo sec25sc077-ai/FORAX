@@ -20,3 +20,4 @@ export function suggestForax(input: string): AiSuggestion {
     explanation: "AI suggestions must be validated by the FORAX compiler before execution."
   };
 }
+
