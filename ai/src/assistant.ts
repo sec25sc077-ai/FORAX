@@ -12,19 +12,57 @@ export interface AiSuggestion {
   valid: boolean;
 }
 
+const NATURAL_LANGUAGE_MAP: Record<string, string> = {
+  "collect process": "COLLECT_PROCESS",
+  "collect processes": "COLLECT_PROCESS",
+  "process evidence": "COLLECT_PROCESS",
+  "collect network": "COLLECT_NETWORK_CONNECTION",
+  "collect network connections": "COLLECT_NETWORK_CONNECTION",
+  "network evidence": "COLLECT_NETWORK_CONNECTION",
+  "collect file": "COLLECT_FILE",
+  "collect files": "COLLECT_FILE",
+  "file evidence": "COLLECT_FILE",
+  "collect user": "COLLECT_USER",
+  "collect users": "COLLECT_USER",
+  "user evidence": "COLLECT_USER",
+  "collect device": "COLLECT_DEVICE",
+  "collect devices": "COLLECT_DEVICE",
+  "device evidence": "COLLECT_DEVICE",
+  "collect memory": "COLLECT_MEMORY",
+  "memory evidence": "COLLECT_MEMORY",
+  "create timeline": "CREATE_TIMELINE",
+  "generate timeline": "CREATE_TIMELINE",
+  "timeline": "CREATE_TIMELINE",
+  "generate report": "GENERATE_REPORT",
+  "create report": "GENERATE_REPORT",
+  "report": "GENERATE_REPORT"
+};
+
 export function suggestForax(input: string): AiSuggestion {
   const text = input.trim().toLowerCase();
+  const operations = new Set<string>();
 
-  const operations = FORAX_OPERATIONS
-    .filter(op => text.includes(op.name.toLowerCase().replaceAll("_", " ")))
-    .map(op => op.name);
+  for (const operation of FORAX_OPERATIONS) {
+    const phrase = operation.name.toLowerCase().replaceAll("_", " ");
 
-  const forax = buildSuggestion(operations);
+    if (text.includes(phrase)) {
+      operations.add(operation.name);
+    }
+  }
+
+  for (const [phrase, operation] of Object.entries(NATURAL_LANGUAGE_MAP)) {
+    if (text.includes(phrase)) {
+      operations.add(operation);
+    }
+  }
+
+  const detectedOperations = Array.from(operations);
+  const forax = buildSuggestion(detectedOperations);
 
   return {
     input,
     forax,
-    operations,
+    operations: detectedOperations,
     explanation:
       "FORAX AI suggestions must be validated by the FORAX compiler before execution.",
     valid: forax ? validateForax(forax) : false
@@ -78,8 +116,8 @@ function buildSuggestion(operations: string[]): string {
         lines.push("CREATE TIMELINE");
         break;
 
-      case "REPORT":
       case "GENERATE_REPORT":
+      case "REPORT":
         lines.push("REPORT");
         break;
 
