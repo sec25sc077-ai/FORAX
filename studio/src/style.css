@@ -1,0 +1,116 @@
+.app {
+  min-height: 100vh;
+  background: #0f172a;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  border-bottom: 1px solid #334155;
+  background: #111827;
+}
+
+.header h1 {
+  margin: 0 0 4px;
+  font-size: 22px;
+}
+
+.header span {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.status {
+  color: #22c55e;
+  font-size: 14px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  padding: 12px 24px;
+  border-bottom: 1px solid #334155;
+  background: #1e293b;
+}
+
+.toolbar button,
+.toolbar select {
+  padding: 8px 14px;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 190px 1fr 280px;
+  min-height: calc(100vh - 125px);
+}
+
+.sidebar,
+.results {
+  padding: 18px;
+  background: #111827;
+}
+
+.sidebar {
+  border-right: 1px solid #334155;
+}
+
+.results {
+  border-left: 1px solid #334155;
+}
+
+.sidebar h2,
+.editor h2,
+.results h2 {
+  margin-top: 0;
+  font-size: 15px;
+}
+
+.sidebar div {
+  padding: 10px;
+  color: #cbd5e1;
+  border-radius: 5px;
+}
+
+.sidebar div:hover {
+  background: #1e293b;
+}
+
+.editor {
+  padding: 18px;
+}
+
+.editor textarea {
+  width: 100%;
+  height: 500px;
+  resize: vertical;
+  padding: 16px;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  outline: none;
+  background: #020617;
+  color: #e2e8f0;
+  font-family: "Cascadia Code", Consolas, monospace;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.results p {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .workspace {
+    grid-template-columns: 150px 1fr;
+  }
+
+  .results {
+    display: none;
+  }
+}

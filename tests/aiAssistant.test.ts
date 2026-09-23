@@ -16,7 +16,21 @@ assert.equal(
 );
 assert.equal(result.valid, true);
 
-assert.equal(validateForax(result.forax), true);
+const analysis = suggestForax(
+  "find processes and count network connections"
+);
+
+assert.deepEqual(analysis.operations, [
+  "FIND_PROCESS",
+  "COUNT_NETWORK_CONNECTION"
+]);
+assert.equal(
+  analysis.forax,
+  "FIND PROCESS\nCOUNT NETWORK_CONNECTION"
+);
+assert.equal(analysis.valid, true);
+
+assert.equal(validateForax("COLLECT PROCESS"), true);
 assert.equal(validateForax("INVALID FORAX COMMAND"), false);
 
 console.log("AI natural-language validation test passed.");
