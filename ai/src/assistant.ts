@@ -30,6 +30,33 @@ const NATURAL_LANGUAGE_MAP: Record<string, string> = {
   "device evidence": "COLLECT_DEVICE",
   "collect memory": "COLLECT_MEMORY",
   "memory evidence": "COLLECT_MEMORY",
+  "find process": "FIND_PROCESS",
+  "find processes": "FIND_PROCESS",
+  "search process": "FIND_PROCESS",
+  "find network connection": "FIND_NETWORK_CONNECTION",
+  "find network connections": "FIND_NETWORK_CONNECTION",
+  "search network connection": "FIND_NETWORK_CONNECTION",
+  "find file": "FIND_FILE",
+  "find files": "FIND_FILE",
+  "find user": "FIND_USER",
+  "find users": "FIND_USER",
+  "find device": "FIND_DEVICE",
+  "find devices": "FIND_DEVICE",
+  "count process": "COUNT_PROCESS",
+  "count processes": "COUNT_PROCESS",
+  "count files": "COUNT_FILE",
+  "count users": "COUNT_USER",
+  "count devices": "COUNT_DEVICE",
+  "count network connections": "COUNT_NETWORK_CONNECTION",
+  "count packets": "COUNT_PACKET",
+  "filter process": "FILTER_PROCESS",
+  "filter processes": "FILTER_PROCESS",
+  "filter files": "FILTER_FILE",
+  "filter users": "FILTER_USER",
+  "filter devices": "FILTER_DEVICE",
+  "filter network connections": "FILTER_NETWORK_CONNECTION",
+  "search files": "SEARCH_FILE",
+  "search file": "SEARCH_FILE",
   "create timeline": "CREATE_TIMELINE",
   "generate timeline": "CREATE_TIMELINE",
   "timeline": "CREATE_TIMELINE",
@@ -110,6 +137,74 @@ function buildSuggestion(operations: string[]): string {
 
       case "COLLECT_MEMORY":
         lines.push("COLLECT MEMORY");
+        break;
+
+      case "FIND_PROCESS":
+        lines.push("FIND PROCESS");
+        break;
+
+      case "FIND_NETWORK_CONNECTION":
+        lines.push("FIND NETWORK_CONNECTION");
+        break;
+
+      case "FIND_FILE":
+        lines.push("FIND FILE");
+        break;
+
+      case "FIND_USER":
+        lines.push("FIND USER");
+        break;
+
+      case "FIND_DEVICE":
+        lines.push("FIND DEVICE");
+        break;
+
+      case "COUNT_PROCESS":
+        lines.push("COUNT PROCESS");
+        break;
+
+      case "COUNT_FILE":
+        lines.push("COUNT FILE");
+        break;
+
+      case "COUNT_USER":
+        lines.push("COUNT USER");
+        break;
+
+      case "COUNT_DEVICE":
+        lines.push("COUNT DEVICE");
+        break;
+
+      case "COUNT_NETWORK_CONNECTION":
+        lines.push("COUNT NETWORK_CONNECTION");
+        break;
+
+      case "COUNT_PACKET":
+        lines.push("COUNT PACKET");
+        break;
+
+      case "FILTER_PROCESS":
+        lines.push("FILTER PROCESS");
+        break;
+
+      case "FILTER_FILE":
+        lines.push("FILTER FILE");
+        break;
+
+      case "FILTER_USER":
+        lines.push("FILTER USER");
+        break;
+
+      case "FILTER_DEVICE":
+        lines.push("FILTER DEVICE");
+        break;
+
+      case "FILTER_NETWORK_CONNECTION":
+        lines.push("FILTER NETWORK_CONNECTION");
+        break;
+
+      case "SEARCH_FILE":
+        lines.push("SEARCH FILE");
         break;
 
       case "CREATE_TIMELINE":
