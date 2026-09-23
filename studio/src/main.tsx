@@ -38,6 +38,7 @@ function App() {
   const [aiInput, setAiInput] = useState("");
   const [aiSuggestion, setAiSuggestion] = useState("");
   const [caseOpen, setCaseOpen] = useState(true);
+  const [liveEvidence, setLiveEvidence] = useState<Evidence[]>(evidence);
 
   const filteredEvidence = useMemo(
     () => evidence.filter((item) => item.type === selectedEvidence || selectedEvidence === "ALL"),
@@ -76,6 +77,7 @@ function App() {
         return;
       }
 
+      setLiveEvidence(result.results.map((item: any, index: number) => ({ id: index + 1, type: item.object ?? item.operation ?? "UNKNOWN", source: item.data?.query ?? item.operation ?? "FORAX", status: item.data?.status ?? "Completed", timestamp: item.timestamp ?? new Date().toISOString() })));
       setOutput(JSON.stringify(result.results, null, 2));
     } catch (error) {
       setOutput(
@@ -219,7 +221,7 @@ function App() {
             <div className="panel-header">
               <div>
                 <h2>FORAX Editor</h2>
-                <span>{language.toUpperCase()} Ã¢â‚¬Â¢ DETERMINISTIC MODE</span>
+                <span>{language.toUpperCase()} ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ DETERMINISTIC MODE</span>
               </div>
               <span className="readonly">READ-ONLY FORENSICS</span>
             </div>
@@ -330,7 +332,7 @@ function App() {
             <div className="panel-header">
               <div>
                 <h2>FORAX AI Assistant</h2>
-                <span>SUGGESTION ONLY Ã¢â‚¬Â¢ COMPILER REMAINS AUTHORITATIVE</span>
+                <span>SUGGESTION ONLY ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ COMPILER REMAINS AUTHORITATIVE</span>
               </div>
             </div>
 
@@ -381,3 +383,6 @@ createRoot(document.getElementById("root")!).render(
     <App />
   </React.StrictMode>
 );
+
+
+
