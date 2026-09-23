@@ -198,7 +198,7 @@ function App() {
             <div className="panel-header">
               <div>
                 <h2>FORAX Editor</h2>
-                <span>{language.toUpperCase()} • DETERMINISTIC MODE</span>
+                <span>{language.toUpperCase()} â€¢ DETERMINISTIC MODE</span>
               </div>
               <span className="readonly">READ-ONLY FORENSICS</span>
             </div>
@@ -309,7 +309,7 @@ function App() {
             <div className="panel-header">
               <div>
                 <h2>FORAX AI Assistant</h2>
-                <span>SUGGESTION ONLY • COMPILER REMAINS AUTHORITATIVE</span>
+                <span>SUGGESTION ONLY â€¢ COMPILER REMAINS AUTHORITATIVE</span>
               </div>
             </div>
 
