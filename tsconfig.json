@@ -13,9 +13,10 @@
   "include": [
     "compiler/**/*.ts",
     "ai/**/*.ts",
-    "tests/**/*.ts"
+    "tests/**/*.ts", "studio/server/**/*.ts"
   ]
 }
+
 
 
 

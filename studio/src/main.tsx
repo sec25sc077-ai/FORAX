@@ -60,10 +60,31 @@ function App() {
     );
   };
 
-  const run = () => {
-    setOutput("Execution queued. Compiler/runtime integration is ready for the next backend milestone.");
-  };
+  const run = async () => {
+    setOutput("Executing FORAX program...");
+    try {
+      const response = await fetch("http://localhost:8787/api/execute", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ source: program, language })
+      });
 
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        setOutput(`Execution failed: ${result.error ?? "Unknown error"}`);
+        return;
+      }
+
+      setOutput(JSON.stringify(result.results, null, 2));
+    } catch (error) {
+      setOutput(
+        `Backend connection failed: ${
+          error instanceof Error ? error.message : String(error)
+        }`
+      );
+    }
+  };
   const newCase = () => {
     setCaseOpen(true);
     setProgram('CASE "NEW-CASE"\nCOLLECT PROCESS\nREPORT');
@@ -198,7 +219,7 @@ function App() {
             <div className="panel-header">
               <div>
                 <h2>FORAX Editor</h2>
-                <span>{language.toUpperCase()} • DETERMINISTIC MODE</span>
+                <span>{language.toUpperCase()} Ã¢â‚¬Â¢ DETERMINISTIC MODE</span>
               </div>
               <span className="readonly">READ-ONLY FORENSICS</span>
             </div>
@@ -309,7 +330,7 @@ function App() {
             <div className="panel-header">
               <div>
                 <h2>FORAX AI Assistant</h2>
-                <span>SUGGESTION ONLY • COMPILER REMAINS AUTHORITATIVE</span>
+                <span>SUGGESTION ONLY Ã¢â‚¬Â¢ COMPILER REMAINS AUTHORITATIVE</span>
               </div>
             </div>
 
