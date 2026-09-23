@@ -57,8 +57,6 @@ export class Parser {
       case "FILTER":
         return this.filterStatement();
 
-        return this.filterStatement();
-
       case "SUMMARIZE":
         return this.summarizeStatement();
 
@@ -78,10 +76,10 @@ export class Parser {
         return this.stopMonitor();
 
       case "WATCH":
+        return this.watchStatement();
 
       case "MONITOR":
         return this.monitorStatement();
-        return this.watchStatement();
 
       case "SEARCH":
         return this.searchFileStatement();
@@ -573,30 +571,3 @@ export class Parser {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
