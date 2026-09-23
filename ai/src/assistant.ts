@@ -1,20 +1,22 @@
 import { FORAX_OPERATIONS } from "../../compiler/src/operationRegistry";
+import { loadAliases } from "../../compiler/src/dictionary";
+import { lex } from "../../compiler/src/lexer";
+import { Parser } from "../../compiler/src/parser";
+import { checkProgram } from "../../compiler/src/typeChecker";
 
 export interface AiSuggestion {
   input: string;
   forax: string;
   operations: string[];
   explanation: string;
+  valid: boolean;
 }
 
 export function suggestForax(input: string): AiSuggestion {
   const text = input.trim().toLowerCase();
 
   const operations = FORAX_OPERATIONS
-    .filter(op => {
-      const name = op.name.toLowerCase().replaceAll("_", " ");
-      return text.includes(name);
-    })
+    .filter(op => text.includes(op.name.toLowerCase().replaceAll("_", " ")))
     .map(op => op.name);
 
   const forax = buildSuggestion(operations);
@@ -24,16 +26,26 @@ export function suggestForax(input: string): AiSuggestion {
     forax,
     operations,
     explanation:
-      "FORAX AI suggests constructs from the registered operation set. " +
-      "The compiler remains the authoritative validator before execution."
+      "FORAX AI suggestions must be validated by the FORAX compiler before execution.",
+    valid: forax ? validateForax(forax) : false
   };
 }
 
-function buildSuggestion(operations: string[]): string {
-  if (operations.length === 0) {
-    return "";
-  }
+export function validateForax(source: string): boolean {
+  try {
+    const aliases = loadAliases("english");
+    const tokens = lex(source, aliases);
+    const ast = new Parser(tokens).parse();
 
+    checkProgram(ast);
+
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function buildSuggestion(operations: string[]): string {
   const lines: string[] = [];
 
   for (const operation of operations) {
@@ -76,5 +88,5 @@ function buildSuggestion(operations: string[]): string {
     }
   }
 
-  return lines.join("\\n");
+  return lines.join("\n");
 }
