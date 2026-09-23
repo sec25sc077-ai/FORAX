@@ -1,54 +1,130 @@
-import React from "react";
+import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./style.css";
 
+const examples: Record<string, string> = {
+  english:
+    'CASE "INC-001"\nCOLLECT PROCESS\nFIND PROCESS\nCREATE TIMELINE\nREPORT',
+  tamil:
+    '?????? "INC-001"\n????? ?????????\n????????? ?????????\n????????? ????????\n???????',
+  hindi:
+    '??? "INC-001"\n?????? ?????????\n??? ?????????\n???? ???????\n???????',
+  marathi:
+    '?????? "INC-001"\n?????? ?????????\n??? ?????????\n???? ??? ???????\n?????'
+};
+
 function App() {
+  const [language, setLanguage] = useState("english");
+  const [program, setProgram] = useState(examples.english);
+  const [output, setOutput] = useState("Ready.");
+  const [activePanel, setActivePanel] = useState("Processes");
+
+  const changeLanguage = (value: string) => {
+    setLanguage(value);
+    setProgram(examples[value] ?? examples.english);
+    setOutput(`Language changed to ${value}.`);
+  };
+
+  const validate = () => {
+    setOutput("FORAX validation requested. Compiler validation integration is the next Studio milestone.");
+  };
+
+  const run = () => {
+    setOutput("FORAX execution requested. Runtime integration is the next Studio milestone.");
+  };
+
   return (
     <div className="app">
       <header className="header">
         <div>
-          <h1>FORAX Forensic Studio</h1>
-          <span>Multilingual deterministic forensic workspace</span>
+          <div className="brand">FORAX</div>
+          <div className="subtitle">Forensic Studio</div>
         </div>
-        <div className="status">? Ready</div>
+        <div className="header-status">
+          <span className="status-dot" />
+          Ready
+        </div>
       </header>
 
-      <section className="toolbar">
+      <nav className="toolbar">
         <button>New Case</button>
         <button>Open Case</button>
-        <button>Run</button>
-        <button>Validate</button>
-        <select defaultValue="english">
+        <button onClick={validate}>Validate</button>
+        <button className="run-button" onClick={run}>Run</button>
+
+        <select
+          value={language}
+          onChange={(e) => changeLanguage(e.target.value)}
+        >
           <option value="english">English</option>
           <option value="tamil">Tamil</option>
           <option value="hindi">Hindi</option>
           <option value="marathi">Marathi</option>
         </select>
-      </section>
+      </nav>
+
+      <div className="case-bar">
+        <span>CASE</span>
+        <strong>INC-001</strong>
+        <span className="case-state">Open</span>
+      </div>
 
       <main className="workspace">
         <aside className="sidebar">
-          <h2>Evidence</h2>
-          <div>Processes</div>
-          <div>Network</div>
-          <div>Files</div>
-          <div>Users</div>
-          <div>Devices</div>
-          <div>Memory</div>
-          <div>Timeline</div>
+          <h3>Evidence</h3>
+
+          {[
+            "Processes",
+            "Network",
+            "Files",
+            "Users",
+            "Devices",
+            "Memory",
+            "Timeline"
+          ].map((item) => (
+            <button
+              key={item}
+              className={activePanel === item ? "evidence active" : "evidence"}
+              onClick={() => setActivePanel(item)}
+            >
+              {item}
+            </button>
+          ))}
         </aside>
 
         <section className="editor">
-          <h2>FORAX Program</h2>
+          <div className="panel-title">
+            <h2>FORAX Program</h2>
+            <span>{language.toUpperCase()}</span>
+          </div>
+
           <textarea
             spellCheck={false}
-            defaultValue={'CASE "INC-001"\\nCOLLECT PROCESS\\nFIND PROCESS\\nCREATE TIMELINE\\nREPORT'}
+            value={program}
+            onChange={(e) => setProgram(e.target.value)}
           />
+
+          <div className="editor-footer">
+            <span>Deterministic compiler</span>
+            <span>Read-only forensic operations</span>
+          </div>
         </section>
 
         <aside className="results">
-          <h2>Results</h2>
-          <p>Execution results will appear here.</p>
+          <div className="panel-title">
+            <h2>{activePanel}</h2>
+            <span>RESULTS</span>
+          </div>
+
+          <div className="result-box">
+            <div className="result-status">? {output}</div>
+          </div>
+
+          <div className="result-info">
+            <div><span>Case</span><strong>INC-001</strong></div>
+            <div><span>Language</span><strong>{language}</strong></div>
+            <div><span>Panel</span><strong>{activePanel}</strong></div>
+          </div>
         </aside>
       </main>
     </div>

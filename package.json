@@ -1,22 +1,23 @@
 {
-    "name":  "forax",
-    "version":  "0.3.0",
-    "private":  true,
-    "description":  "FORAX multilingual deterministic forensic programming language",
-    "scripts":  {
-                    "build":  "tsc",
-                    "start":  "node dist/compiler/src/cli.js",
-                    "test":  "node dist/tests/compiler.test.js \u0026\u0026 node dist/tests/searchFile.test.js \u0026\u0026 node dist/tests/typeChecker.test.js \u0026\u0026 node dist/tests/operationRegistry.test.js \u0026\u0026 node dist/tests/multilingual.test.js \u0026\u0026 node dist/tests/hashFile.test.js \u0026\u0026 node dist/tests/getFile.test.js \u0026\u0026 node dist/tests/summarizeProcess.test.js \u0026\u0026 node dist/tests/verifyFile.test.js",
-                    "studio":  "vite"
-                },
-    "devDependencies":  {
-                            "@types/node":  "^22.0.0",
-                            "@vitejs/plugin-react":  "^6.1.1",
-                            "typescript":  "^5.6.0",
-                            "vite":  "^8.3.0"
-                        },
-    "dependencies":  {
-                         "react":  "^19.3.0",
-                         "react-dom":  "^19.3.0"
-                     }
+  "name": "forax",
+  "version": "0.3.0",
+  "private": true,
+  "description": "FORAX multilingual deterministic forensic programming language",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/compiler/src/cli.js",
+    "studio": "vite",
+    "studio:build": "vite build",
+    "test": "node dist/compiler/src/compiler.test.js && node dist/tests/searchFile.test.js && node dist/tests/typeChecker.test.js && node dist/tests/operationRegistry.test.js && node dist/tests/multilingual.test.js && node dist/tests/hashFile.test.js && node dist/tests/getFile.test.js && node dist/tests/summarizeProcess.test.js && node dist/tests/verifyFile.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@vitejs/plugin-react": "^6.0.0",
+    "typescript": "^5.6.0",
+    "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  }
 }
