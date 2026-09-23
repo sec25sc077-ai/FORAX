@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "forax",
   "version": "0.3.0",
   "private": true,
@@ -8,7 +8,7 @@
     "start": "node dist/compiler/src/cli.js",
     "studio": "vite",
     "studio:build": "vite build",
-    "test": "node dist/compiler/src/compiler.test.js && node dist/tests/searchFile.test.js && node dist/tests/typeChecker.test.js && node dist/tests/operationRegistry.test.js && node dist/tests/multilingual.test.js && node dist/tests/hashFile.test.js && node dist/tests/getFile.test.js && node dist/tests/summarizeProcess.test.js && node dist/tests/verifyFile.test.js"
+    "test": "node dist/tests/compiler.test.js && node dist/tests/searchFile.test.js && node dist/tests/typeChecker.test.js && node dist/tests/operationRegistry.test.js && node dist/tests/multilingual.test.js && node dist/tests/hashFile.test.js && node dist/tests/getFile.test.js && node dist/tests/summarizeProcess.test.js && node dist/tests/verifyFile.test.js"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
@@ -21,3 +21,4 @@
     "react-dom": "^19.1.1"
   }
 }
+
